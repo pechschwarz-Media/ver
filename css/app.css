@@ -9905,7 +9905,6 @@ h3 {
   z-index: 99999;
   width: 100%;
   background: #f5f5f5;
-  transform: translateY(100%);
   transition: all 0.3s ease;
 }
 .connection-check .connection-check__toggle {
@@ -9952,12 +9951,188 @@ h3 {
 }
 .connection-check .connection-check__inner {
   padding: 30px 0;
+  font-size: 1rem;
+}
+.connection-check .connection-check__inner form {
+  display: flex;
+  justify-content: space-between;
+}
+.connection-check .connection-check__inner .form-container {
+  flex-shrink: 1;
+  display: flex;
+}
+.connection-check .connection-check__inner .input-start-city {
+  position: relative;
+}
+.connection-check .connection-check__inner .input-start-city input {
+  background: #fff;
+  border: solid 1px #737373;
+  height: auto;
+  padding: 5px 20px 5px 35px;
+  outline: none;
+  max-width: 200px;
+}
+.connection-check .connection-check__inner .input-start-city i {
+  color: #EE7100;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+}
+.connection-check .connection-check__inner .input-start-point {
+  position: relative;
+}
+.connection-check .connection-check__inner .input-start-point input {
+  background: #fff;
+  border: solid 1px #737373;
+  height: auto;
+  padding: 5px 5px 5px 20px;
+  outline: none;
+  border-left: none;
+  max-width: 200px;
+}
+.connection-check .connection-check__inner .input-start-point span {
+  width: 24px;
+  height: 24px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-right: -12px;
+  transform: translateY(-50%);
+  display: block;
+  border-radius: 50%;
+  border: solid 1px #737373;
+  background: #fff;
+  cursor: pointer;
+  z-index: 10;
+}
+.connection-check .connection-check__inner .input-start-point span i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.connection-check .connection-check__inner .input-end-city {
+  position: relative;
+}
+.connection-check .connection-check__inner .input-end-city input {
+  background: #fff;
+  border: solid 1px #737373;
+  height: auto;
+  padding: 5px 20px 5px 45px;
+  outline: none;
+  border-left: none;
+  max-width: 200px;
+}
+.connection-check .connection-check__inner .input-end-city i {
+  color: #EE7100;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+}
+.connection-check .connection-check__inner .input-end-point input {
+  background: #fff;
+  border: solid 1px #737373;
+  height: auto;
+  padding: 5px 5px 5px 20px;
+  outline: none;
+  border-left: none;
+  max-width: 200px;
+}
+.connection-check .connection-check__inner .input-date {
+  border: solid 1px #737373;
+  display: flex;
+  margin-left: 20px;
+}
+.connection-check .connection-check__inner .input-date .left,
+.connection-check .connection-check__inner .input-date .right {
+  position: relative;
+  height: 100%;
+  width: 20px;
+  cursor: pointer;
+}
+.connection-check .connection-check__inner .input-date .left i,
+.connection-check .connection-check__inner .input-date .right i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #EE7100;
+  font-size: 14px;
+}
+.connection-check .connection-check__inner .input-date input {
+  border: none;
+  background: #fff;
+  height: auto;
+  padding: 5px 10px;
+  outline: none;
+  width: 100px;
+}
+.connection-check .connection-check__inner .date-toggle {
+  border: solid 1px #737373;
+  height: 36px;
+  width: 36px;
+  position: relative;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.connection-check .connection-check__inner .date-toggle i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.connection-check .connection-check__inner .input-time {
+  border: solid 1px #737373;
+  display: flex;
+  margin-left: 20px;
+}
+.connection-check .connection-check__inner .input-time .left,
+.connection-check .connection-check__inner .input-time .right {
+  position: relative;
+  height: 100%;
+  width: 20px;
+  cursor: pointer;
+}
+.connection-check .connection-check__inner .input-time .left i,
+.connection-check .connection-check__inner .input-time .right i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #EE7100;
+  font-size: 14px;
+}
+.connection-check .connection-check__inner .input-time input {
+  border: none;
+  background: #fff;
+  height: auto;
+  padding: 5px 10px;
+  outline: none;
+  line-height: 1.4;
+  width: 65px;
+}
+.connection-check .connection-check__inner .input-time input[type=time]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+  background: none;
+}
+.connection-check .connection-check__inner button {
+  border: none;
+  padding: 5px 15px;
 }
 .connection-check.show {
   transform: translateY(0);
 }
 .connection-check.show .connection-check__toggle .text i {
   transform: rotateZ(180deg);
+}
+
+/* Datepicker */
+.datepicker-panel > ul > li.picked, .datepicker-panel > ul > li.picked:hover {
+  color: #2284B5;
 }
 
 /* Sidebar */

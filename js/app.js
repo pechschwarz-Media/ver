@@ -6,7 +6,46 @@ $(document).scroll(function() {
     } else {
         $('header').removeClass('scroll');
     }
-  });
+});
+
+/* Datepicker */
+
+$(document).ready(function() {
+    $('.connection-check .connection-check__inner .input-date input').datepicker({
+        autoShow: false,
+        autoPick: true,
+        autoHide: true,
+        zIndex: 99999999999,
+        offset: 10,
+        trigger: $('.connection-check .connection-check__inner .date-toggle'),
+        placement: "bottom-right",
+        language: "de-DE",
+        format: "dd.mm.yyyy",
+        days: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
+        daysShort: ['Son', 'Mon', 'Die', 'Mit', 'Don', 'Fre', 'Sam'],
+        daysMin: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'],
+        months: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+        monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez']
+    });
+});
+
+$('.connection-check .connection-check__inner .input-date .left').click(function() {
+    var date = $('.connection-check .connection-check__inner .input-date input').datepicker('getDate');
+    date.setDate(date.getDate() - 1);
+    $('.connection-check .connection-check__inner .input-date input').datepicker('setDate', date);
+});
+
+$('.connection-check .connection-check__inner .input-date .right').click(function() {
+    var date = $('.connection-check .connection-check__inner .input-date input').datepicker('getDate');
+    date.setDate(date.getDate() + 1);
+    $('.connection-check .connection-check__inner .input-date input').datepicker('setDate', date);
+});
+
+$('.connection-check .connection-check__inner .input-time .left').click(function() {
+    var time = $(this).parent().find('input').val(),
+        date = new Date('1995-06-21T' + time);
+    console.log(date);
+});
 
 /* Search Overlay */
 
