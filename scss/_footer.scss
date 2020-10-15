@@ -1,0 +1,109 @@
+/* Footer */
+
+footer {
+    background: #3a3a3a;
+    color: $white;
+    padding: $section-padding;
+    padding-bottom: 0;
+    .footer-logos {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        img {
+            height: 70px;
+            width: auto;
+            margin-right: 30px;
+        }
+    }
+    address {
+        margin-top: 80px;
+        a {
+            color: $white;
+        }
+    }
+    .sitemap {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 160px;
+        li {
+            display: inline-block;
+            margin-right: 20px;
+            a {
+                color: $white;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    .search-title {
+        font-size: 50px;
+        color: theme-color("secondary");
+        margin-bottom: 50px;
+    }
+    form {
+        .input-container {
+            position: relative;
+            display: inline-block;
+            input {
+                height: auto;
+                width: 300px;
+                border: none;
+                border-bottom: solid 1px $white;
+                background: transparent;
+                padding: 10px 40px 10px 0;
+                outline: none;
+                color: $white;
+            }
+            i {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            ::placeholder {
+                color: $white;
+                opacity: 1;
+            }
+            :-ms-input-placeholder {
+                color: $white;
+            }
+            ::-ms-input-placeholder {
+                color: $white;
+            }
+        }
+    }
+    .footer-nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            a {
+                color: $white;
+            }
+        }
+    }
+    .sub-footer {
+        background: $white;
+        margin: $section-padding;
+        margin-bottom: 0;
+        color: $text-color;
+        padding: 20px 0;
+        position: relative;
+        .credit {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            background: #cb0070;
+            color: $white;
+            padding: 0 20px;
+            strong {
+                margin-left: 5px;
+            }
+        }
+    }
+}

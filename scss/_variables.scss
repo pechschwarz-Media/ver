@@ -1,0 +1,49 @@
+/* Global */
+
+$section-padding: 140px 0;
+$section-padding-small: 80px 0;
+
+/* Grid */
+
+$container-max-widths: (
+  sm: 100%,
+  md: 100%,
+  lg: 100%,
+  xl: 100%
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+/* Color */
+
+$primary: #2284B5;
+$secondary: #EE7100;
+
+$light-grey: #f5f5f5;
+$dark-grey: #eeeeee;
+
+$text-color: #737373;
+
+/* Font */
+
+$body-color: $text-color;
+
+$font-family-sans-serif: 'Roboto', sans-serif;
+$font-size-base: 1.25rem;
+$font-size-md: $font-size-base * 1.2;
+$font-size-lg: $font-size-base * 1.5;
+
+$headings-line-height: 1;
+$headings-margin-bottom: 0;
+$headings-font-weight: 700;
+$h1-font-size: 90px;
+$h2-font-size: 40px;
+$h3-font-size: 30px;
+
+$link-hover-decoration: none;

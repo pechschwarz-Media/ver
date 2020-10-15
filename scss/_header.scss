@@ -1,0 +1,134 @@
+/* Header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+    padding: 20px 0;
+    border-bottom: solid 4px transparent;
+    transition: all 0.3s ease;
+    .logo {
+        img {
+            width: 100px;
+            height: auto;
+        }
+    }
+    .main-nav {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+                display: inline-block;
+                position: relative;
+                padding: 10px 0;
+                margin-right: 30px;
+                a {
+                    color: $white;
+                    display: block;
+                    line-height: 1;
+                    transition: all 0.3s ease;
+                    line-height: 1.2;
+                }
+                &.has-sub {
+                    .sub-menu {
+                        display: none;
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        white-space: nowrap;
+                        background: $white;
+                        padding: 6px;
+                        li {
+                            display: inline-block;
+                            padding: 0;
+                            margin-right: 0;
+                            a {
+                                color: $body-color;
+                                font-size: 1rem;
+                                padding: 6px;
+                                line-height: 1;
+                            }
+                            &:hover {
+                                a {
+                                    color: theme-color("secondary");
+                                }
+                            }
+                        }
+                        &:before {
+                            content: "";
+                            width: 0; 
+                            height: 0; 
+                            border-left: 8px solid transparent;
+                            border-right: 8px solid transparent;
+                            border-bottom: 8px solid $white;
+                            bottom: 100%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            position: absolute;
+                        }
+                    }
+                    &:hover {
+                        .sub-menu {
+                            display: block;
+                        }
+                    }
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                &:hover {
+                    a {
+                        color: theme-color("secondary");
+                    }
+                }
+                &.active {
+                    a {
+                        color: theme-color("secondary");
+                    }
+                    &:before {
+                        content: "";
+                        width: 2px;
+                        height: 25px;
+                        background: theme-color("secondary");
+                        display: block;
+                        position: absolute;
+                        left: -10px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+    .search {
+        color: $white;
+        cursor: pointer;
+        position: relative;
+        top: 2px;
+    }
+    &.scroll {
+        background: $white;
+        border-bottom: solid 4px theme-color("secondary");
+        .main-nav {
+            ul {
+                li {
+                    a {
+                        color: $text-color;
+                    }
+                    &.active {
+                        a {
+                            color: theme-color("secondary");
+                        }
+                    }
+                }
+            }
+        }
+        .search {
+            color: $text-color;
+        }
+    }
+}

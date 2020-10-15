@@ -1,0 +1,165 @@
+@font-face {
+  font-family: 'ver';
+  src:  url('../fonts/ver.eot?i5ydz2');
+  src:  url('../fonts/ver.eot?i5ydz2#iefix') format('embedded-opentype'),
+    url('../fonts/ver.ttf?i5ydz2') format('truetype'),
+    url('../fonts/ver.woff?i5ydz2') format('woff'),
+    url('../fonts/ver.svg?i5ydz2#ver') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'ver' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-graduation-cap:before {
+  content: "\e91d";
+  color: #ee7100;
+}
+.icon-calendar-times:before {
+  content: "\e91e";
+  color: #ee7100;
+}
+.icon-hourglass:before {
+  content: "\e91f";
+  color: #ee7100;
+}
+.icon-pay-mobile .path1:before {
+  content: "\e900";
+  color: rgb(238, 113, 0);
+}
+.icon-pay-mobile .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-pay-mobile .path3:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(238, 113, 0);
+}
+.icon-pay-mobile .path4:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(238, 113, 0);
+}
+.icon-pay-mobile .path5:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(238, 113, 0);
+}
+.icon-pay-mobile .path6:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(238, 113, 0);
+}
+.icon-pay-mobile .path7:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(238, 113, 0);
+}
+.icon-pay-mobile .path8:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(238, 113, 0);
+}
+.icon-pay-mobile .path9:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(238, 113, 0);
+}
+.icon-pay-mobile .path10:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(238, 113, 0);
+}
+.icon-pay-mobile .path11:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(238, 113, 0);
+}
+.icon-dashboard:before {
+  content: "\e90b";
+}
+.icon-get-money-back:before {
+  content: "\e90c";
+  color: #ee7100;
+}
+.icon-VER-operating-area:before {
+  content: "\e90d";
+  color: #ee7100;
+}
+.icon-student:before {
+  content: "\e90e";
+  color: #ee7100;
+}
+.icon-arrow-up .path1:before {
+  content: "\e90f";
+  color: rgb(238, 113, 0);
+}
+.icon-arrow-up .path2:before {
+  content: "\e910";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-close .path1:before {
+  content: "\e911";
+  color: rgb(238, 113, 0);
+}
+.icon-close .path2:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-line:before {
+  content: "\e913";
+  color: #fff;
+}
+.icon-download:before {
+  content: "\e914";
+  color: #fff;
+}
+.icon-call:before {
+  content: "\e915";
+  color: #ee7100;
+}
+.icon-calendar .path1:before {
+  content: "\e916";
+  color: rgb(238, 113, 0);
+}
+.icon-calendar .path2:before {
+  content: "\e917";
+  margin-left: -0.875em;
+  color: rgb(238, 238, 238);
+}
+.icon-location:before {
+  content: "\e918";
+  color: #ee7100;
+}
+.icon-double-arrow:before {
+  content: "\e919";
+  color: #737373;
+}
+.icon-interactive-map:before {
+  content: "\e91a";
+  color: #fff;
+}
+.icon-loupe:before {
+  content: "\e91b";
+}
+.icon-downlaod-subscription:before {
+  content: "\e91c";
+}
