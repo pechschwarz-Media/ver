@@ -13,16 +13,31 @@
         padding-bottom: 30px;
         .download {
             display: flex;
+            flex-flow: row wrap;
             align-items: flex-end;
+            @include media-breakpoint-down(sm) {
+                display: block;
+            }
             .text {
                 color: $white;
                 line-height: 1.2;
                 margin-right: 30px;
+                @include media-breakpoint-down(sm) {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
                 img {
                     display: block;
                     margin-bottom: 30px;
                     width: 80px;
                     height: auto;
+                    @include media-breakpoint-down(md) {
+                        margin-bottom: 20px;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        margin-bottom: 10px;
+                        width: 70px;
+                    }
                 }
                 strong {
                     display: block;
@@ -31,9 +46,15 @@
             a {
                 display: inline-block;
                 margin-left: 10px;
+                @include media-breakpoint-down(sm) {
+                    margin-left: 0;
+                }
                 img {
                     height: 45px;
                     width: auto;
+                    @include media-breakpoint-down(sm) {
+                        height: 35px;
+                    }
                 }
             }
         }
@@ -62,6 +83,9 @@
 .home-news {
     padding: $section-padding;
     position: relative;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+    }
     .home-news__single {
         margin-bottom: 30px;
         border: solid 1px #ccc;
@@ -77,6 +101,9 @@
             background: $white;
             padding: 20px;
             min-height: 360px;
+            @include media-breakpoint-down(sm) {
+                min-height: 0;
+            }
             .button {
                 margin-top: 20px;
             }
@@ -86,11 +113,17 @@
         text-align: center;
         position: relative;
         margin-top: 70px;
+        @include media-breakpoint-down(sm) {
+            margin-top: 30px;
+        }
         .inner {
             display: inline-block;
             background: $white;
             padding: 0 40px;
             position: relative;
+            @include media-breakpoint-down(sm) {
+                padding: 0 20px;
+            }
         }
         &:before {
             content: "";
@@ -119,16 +152,37 @@
 .home-services {
     padding: $section-padding;
     position: relative;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+    }
     .home-services__overview {
         display: flex;
         flex-flow: row wrap;
         margin-top: 80px;
+        @include media-breakpoint-down(sm) {
+            margin-top: 40px;
+        }
         .service {
             flex: 0 0 25%;
             max-width: 25%;
             height: 320px;
             position: relative;
             overflow: hidden;
+            @include media-breakpoint-down(lg) {
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+                height: 280px;
+            }
+            @include media-breakpoint-down(md) {
+                flex: 0 0 50%;
+                max-width: 50%;
+                height: 280px;
+            }
+            @include media-breakpoint-down(sm) {
+                flex: 0 0 100%;
+                max-width: 100%;
+                height: 280px;
+            }
             .background {
                 position: absolute;
                 top: 0;
@@ -189,6 +243,9 @@
     .home-traffic__text {
         padding: 80px 0;
         position: relative;
+        @include media-breakpoint-down(md) {
+            padding-bottom: 40px;
+        }
         &:before {
             content: "";
             position: absolute;
@@ -197,6 +254,9 @@
             left: 0;
             width: 100%;
             background: $dark-grey;
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
         }
     }
     .home-traffic__slider {
@@ -205,6 +265,9 @@
         background-position: center center;
         padding: 80px;
         position: relative;
+        @include media-breakpoint-down(md) {
+            padding: 80px 15px;
+        }
         .slider {
             .slide {
                 color: $white;
@@ -231,12 +294,18 @@
                 margin-right: 60px;
                 position: relative;
                 top: 2px;
+                @include media-breakpoint-down(sm) {
+                    margin-right: 30px;
+                }
             }
             .next-slide {
                 cursor: pointer;
                 margin-left: 60px;
                 position: relative;
                 top: 2px;
+                @include media-breakpoint-down(sm) {
+                    margin-left: 30px;
+                }
             }
             .count {
                 position: relative;
@@ -265,17 +334,29 @@
 
 .home-about {
     padding: $section-padding;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+    }
     .button {
         margin-top: 30px;
+        @include media-breakpoint-down(sm) {
+            margin-top: 10px;
+        }
     }
     .home-about__images {
         display: flex;
         flex-flow: row wrap;
         margin: 0 -15px;
+        @include media-breakpoint-down(lg) {
+            margin-top: 40px;
+        }
         .image {
             padding: 0 15px;
             margin-bottom: 30px;
             height: 400px;
+            @include media-breakpoint-down(sm) {
+                height: 320px;
+            }
             .inner {
                 position: relative;
                 height: 100%;
@@ -321,6 +402,10 @@
             &.half {
                 flex: 0 0 50%;
                 max-width: 50%;
+                @include media-breakpoint-down(sm) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
             }
             &:hover {
                 .background {
@@ -339,6 +424,9 @@
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+    }
     .home-counter__container {
         display: flex;
         flex-flow: row wrap;
@@ -349,6 +437,16 @@
             font-weight: $font-weight-bold;
             color: $white;
             line-height: 1.2;
+            @include media-breakpoint-down(md) {
+                flex: 0 0 33.333333%;
+                margin-bottom: 50px;
+                font-size: $font-size-md;
+            }
+            @include media-breakpoint-down(sm) {
+                flex: 0 0 100%;
+                margin-bottom: 50px;
+                font-size: $font-size-md;
+            }
             .number {
                 width: 180px;
                 height: 180px;
@@ -359,6 +457,9 @@
                 align-items: center;
                 justify-content: center;
                 margin-bottom: 40px;
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 20px;
+                }
             }
         }
     }
@@ -380,6 +481,9 @@
     padding: $section-padding;
     overflow: hidden;
     position: relative;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+    }
     h2 {
         color: theme-color("primary");
     }
@@ -388,15 +492,26 @@
         flex-flow: row wrap;
         align-items: flex-end;
         margin-top: 80px;
+        @include media-breakpoint-down(sm) {
+            display: block;
+        }
         .text {
             color: theme-color("primary");
             line-height: 1.2;
             margin-right: 50px;
+            @include media-breakpoint-down(sm) {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
             img {
                 display: block;
                 margin-bottom: 30px;
                 width: 80px;
                 height: auto;
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 10px;
+                    width: 70px;
+                }
             }
             strong {
                 display: block;
@@ -405,6 +520,9 @@
         a {
             display: inline-block;
             margin-left: 10px;
+            @include media-breakpoint-down(sm) {
+                margin-left: 0;
+            }
             img {
                 height: 45px;
                 width: auto;
@@ -413,6 +531,9 @@
     }
     .screenshot {
         display: inline-block;
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
         img {
             width: 300px;
             height: auto;
@@ -428,5 +549,12 @@
         background: theme-color("secondary");
         top: 20%;
         left: 40%;
+        @include media-breakpoint-down(md) {
+            top: 40%;
+        }
+        @include media-breakpoint-down(sm) {
+            top: auto;
+            bottom: -30%;
+        }
     }
 }

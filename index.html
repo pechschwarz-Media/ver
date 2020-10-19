@@ -86,10 +86,14 @@
     <header>
         <div class="container">
             <div class="row align-items-center justify-content-between">
-                <div class="col-xl-auto">
+                <div class="col-xl-auto col-auto">
                     <a href="#" class="logo"><img src="img/logo.png"></a>
                 </div>
-                <div class="col-xl-auto">
+                <div class="col-xl-auto col-auto">
+                    <div class="mobile-controls d-flex d-lg-none">
+                        <div class="nav-toggle"><div class="text">Menü</div><span></span></div>
+                        <div class="search"><i class="ti-search"></i></div>
+                    </div>
                     <nav class="main-nav">
                         <ul>
                             <li class="active"><a href="index.html">Home</a></li>
@@ -100,9 +104,10 @@
                                     <li><a href="verkehrshinweise.html">Verkehrshinweise</a></li>
                                     <li><a href="ver-jahresplan.html">VER Jahresplan</a></li>
                                 </ul>
+                                <span class="d-block d-lg-none"><i class="ti-angle-right"></i></span>
                             </li>
                             <li class="has-sub">
-                                <a href="fahrplan-mobilitaet.html">Fahrplan & Mobilität</a>
+                                <a href="fahrplan-mobilitaet.html">Fahrplan</a>
                                 <ul class="sub-menu">
                                     <li><a href="fahrplanauskunft.html">Fahrplanauskunft</a></li>
                                     <li><a href="linienfahrplaene.html">Linienfahrpläne</a></li>
@@ -110,6 +115,7 @@
                                     <li><a href="ergaenzender-linienverkehr.html">Ergänzender Linienverkehr</a></li>
                                     <li><a href="veranstaltungs-sonderverkehr.html">Veranstaltungs- und Sonderverkehr</a></li>
                                 </ul>
+                                <span class="d-block d-lg-none"><i class="ti-angle-right"></i></span>
                             </li>
                             <li class="has-sub">
                                 <a href="tickets-tarife.html">Tickets & Tarife</a>
@@ -120,6 +126,7 @@
                                     <li><a href="ticketberater.html">Ticketberater</a></li>
                                     <li><a href="tarif-befoerderungsbedingungen.html">Tarif u. Beförderungsbedingungen</a></li>
                                 </ul>
+                                <span class="d-block d-lg-none"><i class="ti-angle-right"></i></span>
                             </li>
                             <li><a href="ver-app.html">VER-App</a></li>
                             <li><a href="service.html">Service</a></li>
@@ -128,7 +135,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="col-xl-auto">
+                <div class="col-xl-auto col-auto d-none d-xl-block">
                     <div class="search"><i class="ti-search"></i></div>
                 </div>
             </div>
@@ -159,7 +166,7 @@
     <section class="global-number">
         <div class="container">
             <div class="row">
-                <div class="col-xl-12 text-center">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center">
                     <span><i class="ti-mobile"></i></span>
                     <div class="global-number__number">Die Schlaue Nummer für Bus & Bahn: 0180 6 / 50 40 30</div>
                     <div class="global-number__costs">(0,20€/Anruf aus dem Festnetz, 0,60€/Anruf Mobilfunknetz)</div>
@@ -176,7 +183,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-4">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                     <div class="home-news__single">
                         <a href="#" class="image" style="background-image:url(http://www.placehold.it/1200x600);"></a>
                         <div class="text">
@@ -186,7 +193,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-8">
+                <div class="col-xl-8 col-lg-6 col-md-6 col-sm-12">
                     <div class="home-news__single">
                         <a href="#" class="image" style="background-image:url(http://www.placehold.it/1200x600);"></a>
                         <div class="text">
@@ -196,7 +203,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                     <div class="home-news__single">
                         <a href="#" class="image" style="background-image:url(http://www.placehold.it/1200x600);"></a>
                         <div class="text">
@@ -206,7 +213,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                     <div class="home-news__single">
                         <a href="#" class="image" style="background-image:url(http://www.placehold.it/1200x600);"></a>
                         <div class="text">
@@ -216,7 +223,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                     <div class="home-news__single">
                         <a href="#" class="image" style="background-image:url(http://www.placehold.it/1200x600);"></a>
                         <div class="text">
@@ -240,12 +247,12 @@
     <section class="text-image bg-dark-grey no-p">
         <div class="container">
             <div class="row align-items-center justify-content-between">
-                <div class="col-xl-5">
+                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
                     <h2>Fahrplan & Mobilität</h2>
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                     <a href="#" class="button primary">Zur Suche</a>
                 </div>
-                <div class="col-xl-6">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <img src="http://www.placehold.it/800x1000">
                 </div>
             </div>
@@ -328,10 +335,10 @@
     <section class="text-image bg-dark-grey no-pb">
         <div class="container">
             <div class="row align-items-center justify-content-between">
-                <div class="col-xl-6">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <img src="http://www.placehold.it/800x1000">
                 </div>
-                <div class="col-xl-5">
+                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
                     <h2>Tickets & Tarife</h2>
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                     <a href="#" class="button primary">Zur Übersicht</a>
@@ -395,12 +402,12 @@
     <section class="home-about">
         <div class="container">
             <div class="row align-items-center justify-content-between">
-                <div class="col-xl-4">
+                <div class="col-xl-4 col-lg-8 col-md-12 col-sm-12">
                     <h2>Wir über uns</h2>
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                     <a href="#" class="button primary">Mehr erfahren</a>
                 </div>
-                <div class="col-xl-7">
+                <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12">
                     <div class="home-about__images">
                         <div class="image full">
                             <div class="inner">
@@ -467,7 +474,7 @@
     <section class="home-app">
         <div class="container">
             <div class="row justify-content-between align-items-center">
-                <div class="col-xl-auto">
+                <div class="col-xl-auto col-lg-auto col-md-12 col-sm-12">
                     <h2>Kennen<br />Sie schon <br />unsere App?</h2>
                     <a class="button primary">Mehr erfahren</a>
                     <div class="home-app__download">
@@ -476,7 +483,7 @@
                         <a href="#" target="_blank"><img src="img/app-store.png"></a>
                     </div>
                 </div>
-                <div class="col-xl-auto">
+                <div class="col-xl-auto col-lg-auto col-md-12 col-sm-12">
                     <div class="screenshot">
                         <img src="img/app.png">
                     </div>
@@ -488,7 +495,7 @@
     <footer>
         <div class="container">
             <div class="row justify-content-between">
-                <div class="col-xl-4">
+                <div class="col-xl-4 col-md-6 col-sm-12">
                     <div class="footer-logos">
                         <img src="img/logo.png">
                         <img src="img/logo-ver-app-footer.png">
@@ -504,7 +511,7 @@
                         E-Mail: <a href="#">info@ver-kehr.de</a>
                     </address>
                 </div>
-                <div class="col-xl-8">
+                <div class="col-xl-8 col-md-6 col-sm-12">
                     <ul class="sitemap">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Aktuelles</a></li>
@@ -516,7 +523,7 @@
                         <li><a href="#">Kontakt</a></li>
                     </ul>
                     <div class="row justify-content-between">
-                        <div class="col-xl-auto">
+                        <div class="col-xl-auto col-md-12 col-sm-12">
                             <div class="search-title">Mobilität hat viele Namen</div>
                             <form>
                                 <div class="input-container">
@@ -525,7 +532,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="col-xl-auto">
+                        <div class="col-xl-auto col-md-12 col-sm-12">
                             <ul class="footer-nav">
                                 <li><a href="#">FAQ</a></li>
                                 <li><a href="#">Downloads</a></li>
@@ -540,7 +547,7 @@
         <div class="sub-footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-6">
+                    <div class="col-xl-6 col-sm-12">
                         Copyright Verkehrsgesellschaft Ennepe-Ruhr mbH 2020
                     </div>
                 </div>

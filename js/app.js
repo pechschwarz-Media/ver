@@ -8,6 +8,17 @@ $(document).scroll(function() {
     }
 });
 
+$('header .mobile-controls .nav-toggle').click(function() {
+    $(this).toggleClass('open');
+    $(this).parents('header').find('.main-nav').toggleClass('open');
+    $('body').toggleClass('open-nav');
+});
+
+$('header .main-nav ul li span').click(function() {
+    $(this).toggleClass('open');
+    $(this).parent().find('.sub-menu').slideToggle(400);
+});
+
 /* Datepicker */
 
 $(document).ready(function() {
@@ -41,10 +52,57 @@ $('.connection-check .connection-check__inner .input-date .right').click(functio
     $('.connection-check .connection-check__inner .input-date input').datepicker('setDate', date);
 });
 
-$('.connection-check .connection-check__inner .input-time .left').click(function() {
-    var time = $(this).parent().find('input').val(),
+function getCurrentTime(date) {
+        var h = (date.getHours().toString().length == 1) ? "0" + date.getHours() : date.getHours();
+            m = (date.getMinutes().toString().length == 1) ? "0" + date.getMinutes() : date.getMinutes()
+            time = h + ":" + m;
+
+    $('.connection-check .connection-check__inner .input-time input').val(time);
+}
+
+function decTime() {
+    var time = $('.connection-check .connection-check__inner .input-time input').val(),
         date = new Date('1995-06-21T' + time);
-    console.log(date);
+
+    if(date.getMinutes() == 00) {
+        var h = ((date.getHours() - 1).toString().length == 1) ? "0" + (date.getHours() - 1) : date.getHours() - 1,
+            m = "59";
+    } else {
+        var h = (date.getHours().toString().length == 1) ? "0" + date.getHours() : date.getHours(),
+            m = ((date.getMinutes() - 1).toString().length == 1) ? "0" + (date.getMinutes() - 1) : date.getMinutes() - 1;
+    }
+
+    var date = new Date('1995-06-21T' + h + ":" + m);
+    getCurrentTime(date);
+}
+
+function incTime() {
+    var time = $('.connection-check .connection-check__inner .input-time input').val(),
+        date = new Date('1995-06-21T' + time);
+
+    if(date.getMinutes() == 59) {
+        var h = ((date.getHours() + 1).toString().length == 1) ? "0" + (date.getHours() + 1) : date.getHours() + 1,
+            m = "00";
+    } else {
+        var h = (date.getHours().toString().length == 1) ? "0" + date.getHours() : date.getHours(),
+            m = ((date.getMinutes() + 1).toString().length == 1) ? "0" + (date.getMinutes() + 1) : date.getMinutes() + 1;
+    }
+
+    var date = new Date('1995-06-21T' + h + ":" + m);
+    getCurrentTime(date);
+}
+
+$(document).ready(function() {
+    var date = new Date();
+    getCurrentTime(date);
+});
+
+$('.connection-check .connection-check__inner .input-time .right').click(function() {
+    incTime();
+});
+
+$('.connection-check .connection-check__inner .input-time .left').click(function() {
+    decTime();
 });
 
 /* Search Overlay */

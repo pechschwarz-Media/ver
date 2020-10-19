@@ -1,3 +1,17 @@
+/* HTML / Body */
+
+body {
+    position: relative;
+    left: 0;
+    transition: all 0.3s ease;
+    &.open-nav {
+        left: -80%;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+    }
+}
+
 /* Connection Check */
 
 .connection-check {
@@ -7,7 +21,7 @@
     z-index: 99999;
     width: 100%;
     background: $light-grey;
-    //transform: translateY(100%);
+    transform: translateY(100%);
     transition: all 0.3s ease;
     .connection-check__toggle {
         background: theme-color("primary");
@@ -19,6 +33,13 @@
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
         cursor: pointer;
+        white-space: nowrap;
+        @include media-breakpoint-down(lg) {
+            padding: 15px 60px;
+        }
+        @include media-breakpoint-down(md) {
+            padding: 15px 40px;
+        }
         span {
             width: 100px;
             height: 100px;
@@ -28,7 +49,17 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            top: -50%;
+            top: -50px;
+            @include media-breakpoint-down(lg) {
+                width: 70px;
+                height: 70px;
+                top: -35px;
+            }
+            @include media-breakpoint-down(sm) {
+                width: 60px;
+                height: 60px;
+                top: -30px;
+            }
             i {
                 color: $white;
                 position: absolute;
@@ -36,6 +67,12 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 font-size: 32px;
+                @include media-breakpoint-down(lg) {
+                    font-size: 24px;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 20px;
+                }
             }
         }
         .text {
@@ -43,6 +80,9 @@
             font-weight: $font-weight-bold;
             font-size: $font-size-md;
             position: relative;
+            @include media-breakpoint-down(md) {
+                font-size: $font-size-base;
+            }
             i {
                 position: relative;
                 font-size: 1rem;
@@ -255,6 +295,10 @@
         height: 65px;
         width: 65px;
         position: relative;
+        @include media-breakpoint-down(sm) {
+            height: 55px;
+            width: 55px;
+        }
         i {
             color: $white;
             position: absolute;
@@ -262,6 +306,9 @@
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 28px;
+            @include media-breakpoint-down(sm) {
+                font-size: 24px;
+            }
         }
         &.download {
             background: theme-color("secondary");
@@ -299,6 +346,11 @@
         font-size: 30px;
         opacity: 1;
         text-shadow: none;
+        @include media-breakpoint-down(sm) {
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+        }
     }
     form {
         display: flex;
@@ -356,9 +408,19 @@
         font-weight: $font-weight-bold;
         color: theme-color("primary");
         margin-top: 15px;
+        @include media-breakpoint-down(md) {
+            font-size: $font-size-md;
+        }
+        @include media-breakpoint-down(sm) {
+            font-size: $font-size-base;
+            line-height: 1.2;
+        }
     }
     .global-number__costs {
         font-size: 1rem;
+        @include media-breakpoint-down(sm) {
+            margin-top: 10px;
+        }
     }
 }
 
@@ -366,11 +428,17 @@
 
 .text-image {
     padding: $section-padding;
+    position: relative;
+    z-index: 20;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+    }
     img {
         width: 100%;
         height: auto;
-        position: relative;
-        z-index: 20;
+        @include media-breakpoint-down(md) {
+            margin: 30px 0;
+        }
     }
     h2 {
         color: theme-color("secondary");

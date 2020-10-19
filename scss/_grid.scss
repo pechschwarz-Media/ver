@@ -2,4 +2,10 @@
 
 .container {
     padding: 0 200px;
+    @include media-breakpoint-down(lg) {
+        padding: 0 80px;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 0 15px;
+    }
 }
