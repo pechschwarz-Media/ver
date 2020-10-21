@@ -1,0 +1,62 @@
+/* Traffic Overview */
+
+.traffic-overview {
+    background: $light-grey;
+    padding: $section-padding;
+    padding-bottom: 0;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+        padding-bottom: 0;
+    }
+    .traffic-overview__single {
+        margin-bottom: 20px;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 15px;
+        }
+        .title {
+            background: $white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            i {
+                color: theme-color("secondary");
+                font-size: 24px;
+                margin-right: 15px;
+            }
+            .lines {
+                margin-left: auto;
+                span {
+                    font-weight: $font-weight-bold;
+                }
+            }
+            &.open {
+                background: theme-color("secondary");
+                color: $white;
+                i {
+                    color: $white;
+                }
+            }
+        }
+        .content {
+            display: none;
+            background: $white;
+            .inner {
+                padding: 20px;
+                .content__block {
+                    margin-bottom: 30px;
+                    span {
+                        display: block;
+                        font-weight: $font-weight-bold;
+                    }
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

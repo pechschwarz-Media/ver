@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/app.css">
+    <title>VER</title>
+</head>
+<body>
+
+    <div class="search-overlay">
+        <div class="close"><i class="ti-close"></i></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-5 col-lg-8 col-md-12 col-sm-12">
+                    <h2>Suchen</h2>
+                    <form>
+                        <input type="text" placeholder="Suchen">
+                        <button type="submit">Suchen</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="connection-check">
+        <div class="connection-check__toggle">
+            <span><i class="ti-location-arrow"></i></span>
+            <div class="text">Finde deine VERbindung <i class="ti-angle-down"></i></div>
+        </div>
+        <div class="connection-check__inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <form>
+                            <div class="form-container">
+                                <div class="input-start-city">
+                                    <i class="ti-location-pin"></i>
+                                    <input type="text" placeholder="von (Stadt)">
+                                </div>
+                                <div class="input-start-point">
+                                    <input type="text" placeholder="von (Punkt)">
+                                    <span><i class="ti-arrows-horizontal"></i></span>
+                                </div>
+                                <div class="input-end-city">
+                                    <i class="ti-location-pin"></i>
+                                    <input type="text" placeholder="nach (Stadt)">
+                                </div>
+                                <div class="input-end-point">
+                                    <input type="text" placeholder="nach (Punkt)">
+                                </div>
+                                <div class="input-date">
+                                    <div class="left"><i class="ti-angle-left"></i></div>
+                                    <input type="text" value="" id="date">
+                                    <div class="right"><i class="ti-angle-right"></i></div>
+                                </div>
+                                <div class="date-toggle" data-toggle="datepicker">
+                                    <i class="ti-calendar"></i>
+                                </div>
+                                <div class="input-time">
+                                    <div class="left"><i class="ti-angle-left"></i></div>
+                                    <input type="time" value="13:30">
+                                    <div class="right"><i class="ti-angle-right"></i></div>
+                                </div>
+                            </div>
+                            <div class="form-container">
+                                <button type="submit" class="button primary">Verbindung finden</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <a href="#" class="download"><i class="ti-download"></i></a>
+        <a href="#" class="map"><i class="ti-map"></i></a>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-xl-auto col-auto">
+                    <a href="#" class="logo"><img src="img/logo.png"></a>
+                </div>
+                <div class="col-xl-auto col-auto">
+                    <div class="mobile-controls d-flex d-lg-none">
+                        <div class="nav-toggle"><div class="text">Menü</div><span></span></div>
+                        <div class="search"><i class="ti-search"></i></div>
+                    </div>
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li class="has-sub">
+                                <a href="aktuelles.html">Aktuelles</a>
+                                <ul class="sub-menu">
+                                    <li><a href="presse-news.html">Presse & News</a></li>
+                                    <li class="active"><a href="verkehrshinweise.html">Verkehrshinweise</a></li>
+                                    <li><a href="ver-jahresplan.html">VER Jahresplan</a></li>
+                                </ul>
+                                <span class="d-block d-lg-none"><i class="ti-angle-right"></i></span>
+                            </li>
+                            <li class="has-sub">
+                                <a href="fahrplan-mobilitaet.html">Fahrplan</a>
+                                <ul class="sub-menu">
+                                    <li><a href="fahrplanauskunft.html">Fahrplanauskunft</a></li>
+                                    <li><a href="linienfahrplaene.html">Linienfahrpläne</a></li>
+                                    <li><a href="einsatzwagenplaene.html">Einsatzwagenpläne</a></li>
+                                    <li><a href="ergaenzender-linienverkehr.html">Ergänzender Linienverkehr</a></li>
+                                    <li><a href="veranstaltungs-sonderverkehr.html">Veranstaltungs- und Sonderverkehr</a></li>
+                                </ul>
+                                <span class="d-block d-lg-none"><i class="ti-angle-right"></i></span>
+                            </li>
+                            <li class="has-sub">
+                                <a href="tickets-tarife.html">Tickets & Tarife</a>
+                                <ul class="sub-menu">
+                                    <li><a href="ticketsuebersicht.html">Ticketsübersicht</a></li>
+                                    <li><a href="kunden-werben-kunden.html">Kunden werben Kunden</a></li>
+                                    <li><a href="webshop.html">Webshop</a></li>
+                                    <li><a href="ticketberater.html">Ticketberater</a></li>
+                                    <li><a href="tarif-befoerderungsbedingungen.html">Tarif u. Beförderungsbedingungen</a></li>
+                                </ul>
+                                <span class="d-block d-lg-none"><i class="ti-angle-right"></i></span>
+                            </li>
+                            <li><a href="ver-app.html">VER-App</a></li>
+                            <li><a href="service.html">Service</a></li>
+                            <li><a href="karriere.html">Karriere</a></li>
+                            <li><a href="kontakt.html">Kontakt</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xl-auto col-auto d-none d-xl-block">
+                    <div class="search"><i class="ti-search"></i></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="header">
+        <div class="header__background" style="background-image:url(http://www.placehold.it/1920x1080);"></div>
+        <div class="header__text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <h1>Stärkung des Nahverkehrs im Ruhrgebiet</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="global-number">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center">
+                    <span><i class="ti-mobile"></i></span>
+                    <div class="global-number__number">Die Schlaue Nummer für Bus & Bahn: 0180 6 / 50 40 30</div>
+                    <div class="global-number__costs">(0,20€/Anruf aus dem Festnetz, 0,60€/Anruf Mobilfunknetz)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="traffic-overview">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="traffic-overview__single">
+                        <div class="title"><i class="ti-plus"></i>Witten Perdebachstraße - Sperrung Bahnübergang<div class="lines">Linie <span>371 | 558 | NE4</span></div></div>
+                        <div class="content">
+                            <div class="inner">
+                                <div class="content__block">
+                                    <span>Beginn</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                                <div class="content__block">
+                                    <span>Ende</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                                <div class="content__block">
+                                    <span>Haltestellen</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                                <div class="content__block">
+                                    <span>Informationen</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                                <div class="content__block">
+                                    <span>Umleitung</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="traffic-overview__single">
+                        <div class="title"><i class="ti-plus"></i>Witten Perdebachstraße - Sperrung Bahnübergang<div class="lines">Linie <span>371 | 558 | NE4</span></div></div>
+                        <div class="content">
+                            <div class="inner">
+                                <div class="content__block">
+                                    <span>Beginn</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                                <div class="content__block">
+                                    <span>Ende</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                                <div class="content__block">
+                                    <span>Haltestellen</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                                <div class="content__block">
+                                    <span>Informationen</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                                <div class="content__block">
+                                    <span>Umleitung</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="traffic-overview__single">
+                        <div class="title"><i class="ti-plus"></i>Witten Perdebachstraße - Sperrung Bahnübergang<div class="lines">Linie <span>371 | 558 | NE4</span></div></div>
+                        <div class="content">
+                            <div class="inner">
+                                <div class="content__block">
+                                    <span>Beginn</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                                <div class="content__block">
+                                    <span>Ende</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                                <div class="content__block">
+                                    <span>Haltestellen</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                                <div class="content__block">
+                                    <span>Informationen</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                                <div class="content__block">
+                                    <span>Umleitung</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="traffic-overview__single">
+                        <div class="title"><i class="ti-plus"></i>Witten Perdebachstraße - Sperrung Bahnübergang<div class="lines">Linie <span>371 | 558 | NE4</span></div></div>
+                        <div class="content">
+                            <div class="inner">
+                                <div class="content__block">
+                                    <span>Beginn</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                                <div class="content__block">
+                                    <span>Ende</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                                <div class="content__block">
+                                    <span>Haltestellen</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                                <div class="content__block">
+                                    <span>Informationen</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                                <div class="content__block">
+                                    <span>Umleitung</span>
+                                    Lorem ipsum dolor sit amet consetetur sadipscing elitr.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-app grey-background">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-xl-auto col-lg-auto col-md-12 col-sm-12">
+                    <h2>Kennen<br />Sie schon <br />unsere App?</h2>
+                    <a class="button primary">Mehr erfahren</a>
+                    <div class="home-app__download">
+                        <div class="text"><img src="img/logo-ver-app.png"><strong>VER-App</strong>herunterladen</div>
+                        <a href="#" target="_blank"><img src="img/google-play-store.png"></a>
+                        <a href="#" target="_blank"><img src="img/app-store.png"></a>
+                    </div>
+                </div>
+                <div class="col-xl-auto col-lg-auto col-md-12 col-sm-12">
+                    <div class="screenshot">
+                        <img src="img/app.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <div class="footer-logos">
+                        <img src="img/logo.png">
+                        <img src="img/logo-ver-app-footer.png">
+                    </div>
+                    <address>
+                        <strong>Verkehrsgesellschaft Ennepe-Ruhr mbH</strong><br />
+                        Vertretungsberechtigter Geschäftsführer:<br />
+                        Dipl.-Geogr. Peter Bökenkötter<br />
+                        Wuppermannshof 7<br />
+                        58256 Ennepetal<br /><br />
+                        Telefon: <a href="#">(02333) 978-50</a><br />
+                        Telefax: <a href="#">(02333) 978-515</a><br />
+                        E-Mail: <a href="#">info@ver-kehr.de</a>
+                    </address>
+                </div>
+                <div class="col-xl-8 col-md-6 col-sm-12">
+                    <ul class="sitemap">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Aktuelles</a></li>
+                        <li><a href="#">Fahrplan & Mobilität</a></li>
+                        <li><a href="#">Tickets & Tarife</a></li>
+                        <li><a href="#">VER-App</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Wir über uns</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                    </ul>
+                    <div class="row justify-content-between">
+                        <div class="col-xl-auto col-md-12 col-sm-12">
+                            <div class="search-title">Mobilität hat viele Namen</div>
+                            <form>
+                                <div class="input-container">
+                                    <input type="text" placeholder="Suche">
+                                    <i class="ti-search"></i>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-xl-auto col-md-12 col-sm-12">
+                            <ul class="footer-nav">
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Downloads</a></li>
+                                <li><a href="#">Partner</a></li>
+                                <li><a href="#">Interaktiver Liniennetzplan</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-sm-12">
+                        Copyright Verkehrsgesellschaft Ennepe-Ruhr mbH 2020
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="credit">Design by <strong>pechschwarz Media</strong></a>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/counterup.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

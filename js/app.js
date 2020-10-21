@@ -19,6 +19,23 @@ $('header .main-nav ul li span').click(function() {
     $(this).parent().find('.sub-menu').slideToggle(400);
 });
 
+/* SMOOTH SCROLL */
+
+$(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+});
+
 /* Datepicker */
 
 $(document).ready(function() {
@@ -156,3 +173,94 @@ $('.home-counter .home-counter__container .count .number span').counterUp({
     delay: 10,
     time: 3000
 });
+
+/* News Slider */
+
+$('.news-overview .news-overview__slider').slick({
+    autoplay: false,
+    arrows: false,
+    dots: true
+});
+
+/* Traffic Overview (Accordion) */
+
+$(document).ready(function(){
+    $('.traffic-overview .traffic-overview__single .title').click(function() {
+        $(this).toggleClass('open');
+        $accordion_content = $(this).next('.content');
+        $('.traffic-overview .traffic-overview__single .content').not($accordion_content).slideUp();
+        $('.traffic-overview .traffic-overview__single .content').not($accordion_content).prev('.title').removeClass('open');
+        $accordion_content.stop(true, true).slideToggle(500);
+    });
+});
+
+/* Timetable */
+
+$('.timetable .timetable__child .form-container').click(function() {
+    var parent = $(this).parent();
+    parent.addClass('full');
+    $('.timetable .timetable__child').not(parent).addClass('hide');
+});
+
+$('.timetable .timetable__child .close').click(function() {
+    var parent = $(this).parent();
+    parent.removeClass('full');
+    $('.timetable .timetable__child').not(parent).removeClass('hide');
+});
+
+$(document).ready(function() {
+    var date = new Date($.now()),
+        y = date.getFullYear(),
+        m = (date.getMonth().toString().length == 1) ? "0" + date.getMonth() : date.getMonth(),
+        d = (date.getDay().toString().length == 1) ? "0" + date.getDay() : date.getDay(),
+        h = (date.getHours().toString().length == 1) ? "0" + date.getHours() : date.getHours(),
+        mi = (date.getMinutes().toString().length == 1) ? "0" + date.getMinutes() : date.getMinutes(),
+        dateOutput = y + "-" + m + "-" + d + "T" + h + ":" + mi;
+
+    $('.timetable .timetable__child .form-container form .datetime input').val(dateOutput);
+});
+
+$('.timetable .timetable__child .form-container form .datetime i').click(function() {
+    $('.timetable .timetable__child .form-container form .datetime input').focus();
+});
+
+/* Downloads (Filter) */
+
+$('.downloads .downloads__filter select').change(function() {
+    var value = $(this).val();
+
+    if(value == "*") {
+        $('.downloads .downloads__list .download').show();
+    } else {
+        $('.downloads .downloads__list .download').hide();
+        $('.downloads .downloads__list .download[data-filter="' + value + '"]').show();
+    }
+});
+
+/* Accordion */
+
+$(document).ready(function(){
+    $('.accordion__single .title').click(function() {
+        $(this).toggleClass('open');
+        $accordion_content = $(this).next('.content');
+        $('.accordion__single .content').not($accordion_content).slideUp();
+        $('.accordion__single .content').not($accordion_content).prev('.title').removeClass('open');
+        $accordion_content.stop(true, true).slideToggle(500);
+    });
+});
+
+/* Tickets (Equalizer) */
+
+function ticket_equalizer() {
+    $('.tickets').each(function() {
+        var heightMax = 0;
+        $(this).find('.features').each(function() {
+            var height = $(this).outerHeight();
+            if(height > heightMax) {
+                heightMax = height;
+            }
+        });
+        $(this).find('.features').css('min-height', heightMax + "px");
+    });
+}
+ticket_equalizer();

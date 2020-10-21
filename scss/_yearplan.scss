@@ -1,0 +1,11 @@
+/* Yearplan */
+
+.yearplan {
+    background: $light-grey;
+    padding: $section-padding;
+    padding-bottom: 0;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+        padding-bottom: 0;
+    }
+}

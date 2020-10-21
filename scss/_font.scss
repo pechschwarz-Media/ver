@@ -1,5 +1,11 @@
 /* Headlines */
 
+h1 {
+    @include media-breakpoint-down(sm) {
+        font-size: 36px;
+    }
+}
+
 h2 {
     margin-bottom: 60px;
     @include media-breakpoint-down(sm) {
@@ -24,9 +30,17 @@ h3 {
     &.primary {
         background: theme-color("primary");
         color: $white;
+        transition: all 0.3s ease;
+        &:hover {
+            background: theme-color("secondary");
+        }
     }
     &.secondary {
         background: theme-color("secondary");
         color: $white;
+        transition: all 0.3s ease;
+        &:hover {
+            background: theme-color("primary");
+        }
     }
 }

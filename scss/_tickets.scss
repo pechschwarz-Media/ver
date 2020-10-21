@@ -1,0 +1,143 @@
+/* Tickets */
+
+.tickets {
+    padding: $section-padding;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+    }
+    .tickets__single {
+        margin-bottom: 30px;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 15px;
+        }
+        .title {
+            background: theme-color("secondary");
+            color: $white;
+            font-weight: $font-weight-bold;
+            padding: 15px 30px;
+            font-size: 24px;
+        }
+        .features {
+            padding: 30px;
+            background: $white;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            position: relative;
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li {
+                    position: relative;
+                    padding-left: 30px;
+                    margin-bottom: 20px;
+                    &:before {
+                        content: "\e64c";
+                        font-family: "themify";
+                        color: theme-color("secondary");
+                        position: absolute;
+                        left: 0;
+                        top: -1px;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .button {
+                margin-top: 30px;
+            }
+            span {
+                width: 0; 
+                height: 0; 
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+                border-top: 12px solid theme-color("secondary");
+                position: absolute;
+                top: 0;
+                left: 30px;
+            }
+            .text {
+                flex: 0 0 50%;
+                max-width: 50%;
+                padding: 30px;
+                @include media-breakpoint-down(md) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+            }
+            .image {
+                flex: 0 0 50%;
+                max-width: 50%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                @include media-breakpoint-down(md) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    height: 200px;
+                }
+            }
+            &.flex-row {
+                flex-flow: row wrap;
+                align-items: unset;
+                padding: 0;
+            }
+        }
+    }
+    &.dark-grey-bg {
+        background: $dark-grey;
+        h2 {
+            color: theme-color("secondary");
+        }
+    }
+    &.secondary-bg {
+        background: theme-color("secondary");
+        h2 {
+            color: $white;
+        }
+        .tickets__single {
+        }
+    }
+}
+
+/* Download Pricelist */
+
+.download-pricelist {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: $section-padding;
+    position: relative;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+    }
+    a {
+        background: theme-color("secondary");
+        color: $white;
+        padding: 30px;
+        border-radius: 15px;
+        font-weight: $font-weight-bold;
+        display: inline-block;
+        font-size: 24px;
+        @include media-breakpoint-down(sm) {
+            font-size: 1rem;
+        }
+        i {
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $black;
+        opacity: 0.4;
+    }
+}
