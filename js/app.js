@@ -276,3 +276,11 @@ $(document).ready(function(){
         $accordion_content.stop(true, true).slideToggle(500);
     });
 });
+
+/* Select Center (Contact) */
+
+$('#select-center').change(function() {
+    var center = $(this).val();
+    $('.contact-map .location').hide();
+    $('.contact-map .location[data-center="' + center + '"]').show();
+});

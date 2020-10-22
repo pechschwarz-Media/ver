@@ -1,0 +1,181 @@
+/* Job Overview */
+
+.job-overview {
+    padding: $section-padding;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+    }
+    .job-overview__single {
+        @include media-breakpoint-down(md) {
+            margin-bottom: 15px;
+        }
+        .title {
+            background: theme-color("secondary");
+            color: $white;
+            font-weight: $font-weight-bold;
+            padding: 15px 30px;
+            font-size: 24px;
+            @include media-breakpoint-down(sm) {
+                padding: 15px;
+            }
+        }
+        .content {
+            height: 300px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: relative;
+            .text {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 30px;
+                color: $white;
+                z-index: 30;
+                @include media-breakpoint-down(sm) {
+                    padding: 15px;
+                }
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: $black;
+                opacity: 0.25;
+                z-index: 10;
+            }
+        }
+    }
+}
+
+/* Job Detail */
+
+.job-detail {
+    background: $light-grey;
+    padding: $section-padding;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+    }
+    .job-keys {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 80px;
+        list-style: none;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 40px;
+        }
+        li {
+            display: inline-block;
+            margin-right: 40px;
+            i {
+                color: theme-color("secondary");
+                position: relative;
+                top: 1px;
+                margin-right: 10px;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    .job-detail__box {
+        margin-bottom: 30px;
+        @include media-breakpoint-down(md) {
+            margin-bottom: 15px;
+        }
+        .title {
+            background: theme-color("secondary");
+            color: $white;
+            font-weight: $font-weight-bold;
+            padding: 15px 30px;
+            font-size: 24px;
+            @include media-breakpoint-down(sm) {
+                padding: 15px;
+            }
+        }
+        .content {
+            position: relative;
+            padding: 30px;
+            background: $white;
+            @include media-breakpoint-down(sm) {
+                padding: 15px;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li {
+                    position: relative;
+                    margin-bottom: 10px;
+                    padding-left: 30px;
+                    &:before {
+                        content: "\e64c";
+                        font-family: "themify";
+                        color: theme-color("secondary");
+                        position: absolute;
+                        top: 1px;
+                        left: 0;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &:before {
+                content: "";
+                width: 0; 
+                height: 0; 
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+                border-top: 12px solid theme-color("secondary");
+                position: absolute;
+                top: 0;
+                left: 30px;
+                @include media-breakpoint-down(sm) {
+                    left: 15px;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-top: 8px solid theme-color("secondary");
+                }
+            }
+        }
+    }
+}
+
+/* Job Apply */
+
+.job-apply {
+    padding: $section-padding;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    color: $white;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+        font-size: $font-size-base;
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    .button {
+        font-size: $font-size-base;
+        margin-top: 30px;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $black;
+        opacity: 0.4;
+    }
+}
