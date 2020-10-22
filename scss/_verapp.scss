@@ -1,0 +1,231 @@
+/* App Header */
+
+.app-header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    .app-header__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .app-header__content {
+        flex: 0 0 100%;
+        .app-headline {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            .image {
+                text-align: center;
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
+                img {
+                    display: block;
+                    height: 65vh;
+                    width: auto;
+                }
+                i {
+                    font-size: 40px;
+                    color: $white;
+                    margin-top: 10px;
+                    display: block;
+                }
+            }
+            h1 {
+                color: $white;
+                margin-left: 50px;
+            }
+        }
+    }
+}
+
+/* App Detail */
+
+.app-detail {
+    padding: $section-padding;
+    background: $light-grey;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+    }
+    h2 {
+        color: theme-color("secondary");
+        margin-bottom: 20px;
+    }
+    h3 {
+        margin-bottom: 100px;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 80px;
+        }
+    }
+    .app-detail__info {
+        .title {
+            background: theme-color("secondary");
+            color: $white;
+            font-weight: $font-weight-bold;
+            padding: 15px 30px;
+            font-size: 24px;
+            @include media-breakpoint-down(sm) {
+                padding: 15px;
+            }
+        }
+        .content {
+            background: $white;
+            display: flex;
+            flex-flow: row wrap;
+            .info {
+                flex: 0 0 50%;
+                max-width: 50%;
+                padding: 30px;
+                position: relative;
+                @include media-breakpoint-down(lg) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+                @include media-breakpoint-down(sm) {
+                    padding: 15px;
+                }
+                span {
+                    width: 0; 
+                    height: 0; 
+                    border-left: 12px solid transparent;
+                    border-right: 12px solid transparent;
+                    border-top: 12px solid theme-color("secondary");
+                    position: absolute;
+                    top: 0;
+                    left: 30px;
+                    @include media-breakpoint-down(sm) {
+                        left: 15px;
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                        border-top: 8px solid theme-color("secondary");
+                    }
+                }
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    margin-bottom: 30px;
+                    li {
+                        margin-bottom: 10px;
+                        i {
+                            margin-right: 10px;
+                            position: relative;
+                            top: 1px;
+                            &.ti-check {
+                                color: $success;
+                            }
+                        }
+                        ul {
+                            list-style: none;
+                            margin: 0;
+                            margin-left: 30px;
+                            li {
+                                font-size: 14px;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+                .button-group {
+                    .button {
+                        margin-top: 5px;
+                    }
+                }
+            }
+            .image {
+                flex: 0 0 50%;
+                max-width: 50%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                @include media-breakpoint-down(lg) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    height: 300px;
+                }
+            }
+        }
+    }
+    .app-detail__features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @include media-breakpoint-down(sm) {
+            margin-top: 40px;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 20px;
+            }
+            img {
+                width: 80px;
+                height: auto;
+                margin-right: 30px;
+                @include media-breakpoint-only(md) {
+                    width: 50px;
+                    margin-right: 15px;
+                }
+            }
+            .text {
+                span {
+                    display: block;
+                    font-weight: $font-weight-bold;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/* App Download */
+
+.app-download {
+    padding: $section-padding;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    color: $white;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+        font-size: $font-size-md;
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    .app-download__buttons {
+        margin-top: 40px;
+        a {
+            display: inline-block;
+            img {
+                height: 40px;
+                width: auto;
+            }
+        }
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $black;
+        opacity: 0.4;
+    }
+}

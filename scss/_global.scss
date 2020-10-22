@@ -455,6 +455,9 @@ body {
             color: $text-color;
             margin-bottom: 0;
         }
+        h3 {
+            margin-top: 10px;
+        }
         img {
             height: 70px;
             width: auto;
@@ -504,6 +507,35 @@ body {
             }
         }
     }
+    .links {
+        margin-top: 80px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        @include media-breakpoint-down(md) {
+            margin-top: 60px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-top: 40px;
+        }
+        .links__single {
+            flex: 0 0 31%;
+            background: theme-color("secondary");
+            display: block;
+            color: $white;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 3%;
+            @include media-breakpoint-down(md) {
+                flex: 0 0 48%;
+                margin-bottom: 4%;
+            }
+            @include media-breakpoint-down(sm) {
+                flex: 0 0 100%;
+                margin-bottom: 15px;
+            }
+        }
+    }
     .accordion {
         margin-top: 80px;
         @include media-breakpoint-down(md) {
@@ -547,6 +579,9 @@ body {
                 background: $white;
                 .inner {
                     padding: 20px;
+                    a {
+                        color: theme-color("secondary");
+                    }
                     .content__block {
                         margin-bottom: 30px;
                         span {
@@ -801,5 +836,23 @@ body {
                 margin-right: 0;
             }
         }
+    }
+}
+
+/* Content Section */
+
+.content-section {
+    padding: $section-padding;
+    padding-top: 0;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+        padding-top: 0;
+    }
+    h2 {
+        margin-bottom: 30px;
+    }
+    h3 {
+        color: theme-color("secondary");
+        margin-top: 30px;
     }
 }

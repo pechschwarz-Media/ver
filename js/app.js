@@ -264,3 +264,15 @@ function ticket_equalizer() {
     });
 }
 ticket_equalizer();
+
+/* Ticket Accordion */
+
+$(document).ready(function(){
+    $('.ticket-accordion .accordion .title').click(function() {
+        $(this).toggleClass('open');
+        $accordion_content = $(this).next('.content');
+        $('.accordion .content').not($accordion_content).slideUp();
+        $('.accordion .content').not($accordion_content).prev('.title').removeClass('open');
+        $accordion_content.stop(true, true).slideToggle(500);
+    });
+});

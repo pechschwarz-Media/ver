@@ -374,7 +374,7 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: 1.6875rem;
+  font-size: 1.5rem;
 }
 
 h5, .h5 {
@@ -10377,6 +10377,9 @@ body.open-nav {
   color: #737373;
   margin-bottom: 0;
 }
+.text-image .headline h3 {
+  margin-top: 10px;
+}
 .text-image .headline img {
   height: 70px;
   width: auto;
@@ -10437,6 +10440,43 @@ body.open-nav {
   position: relative;
   top: 1px;
 }
+.text-image .links {
+  margin-top: 80px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+@media (max-width: 1099.98px) {
+  .text-image .links {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 767.98px) {
+  .text-image .links {
+    margin-top: 40px;
+  }
+}
+.text-image .links .links__single {
+  flex: 0 0 31%;
+  background: #EE7100;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 3%;
+}
+@media (max-width: 1099.98px) {
+  .text-image .links .links__single {
+    flex: 0 0 48%;
+    margin-bottom: 4%;
+  }
+}
+@media (max-width: 767.98px) {
+  .text-image .links .links__single {
+    flex: 0 0 100%;
+    margin-bottom: 15px;
+  }
+}
 .text-image .accordion {
   margin-top: 80px;
 }
@@ -10489,6 +10529,9 @@ body.open-nav {
 }
 .text-image .accordion .accordion__single .content .inner {
   padding: 20px;
+}
+.text-image .accordion .accordion__single .content .inner a {
+  color: #EE7100;
 }
 .text-image .accordion .accordion__single .content .inner .content__block {
   margin-bottom: 30px;
@@ -10760,6 +10803,25 @@ body.open-nav {
   margin-right: 0;
 }
 
+/* Content Section */
+.content-section {
+  padding: 140px 0;
+  padding-top: 0;
+}
+@media (max-width: 767.98px) {
+  .content-section {
+    padding: 80px 0;
+    padding-top: 0;
+  }
+}
+.content-section h2 {
+  margin-bottom: 30px;
+}
+.content-section h3 {
+  color: #EE7100;
+  margin-top: 30px;
+}
+
 /* Grid */
 .container {
   padding: 0 200px;
@@ -10798,6 +10860,16 @@ h3 {
 @media (max-width: 767.98px) {
   h3 {
     font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+h4 {
+  margin-bottom: 20px;
+}
+@media (max-width: 767.98px) {
+  h4 {
+    font-size: 20px;
     margin-bottom: 20px;
   }
 }
@@ -11362,6 +11434,41 @@ footer .sub-footer .credit strong {
   footer .sub-footer .credit strong {
     margin-left: 0;
   }
+}
+
+/* Search */
+.search .search__form {
+  background: #f5f5f5;
+  padding: 60px 0;
+}
+.search .search__form form {
+  display: flex;
+}
+.search .search__form form input {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  border: solid 1px #737373;
+  border-right: none;
+}
+.search .search__form form button {
+  border: none;
+}
+.search .search__results {
+  padding: 80px 0;
+  position: relative;
+}
+.search .search__results:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #f5f5f5;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
 }
 
 /* Home Slider */
@@ -12374,6 +12481,11 @@ footer .sub-footer .credit strong {
   padding: 15px 30px;
   font-size: 24px;
 }
+@media (max-width: 767.98px) {
+  .tickets .tickets__single .title {
+    padding: 15px;
+  }
+}
 .tickets .tickets__single .features {
   padding: 30px;
   background: #fff;
@@ -12392,6 +12504,11 @@ footer .sub-footer .credit strong {
   position: relative;
   padding-left: 30px;
   margin-bottom: 20px;
+}
+@media (max-width: 767.98px) {
+  .tickets .tickets__single .features ul li {
+    padding-left: 20px;
+  }
 }
 .tickets .tickets__single .features ul li:before {
   content: "";
@@ -12417,6 +12534,14 @@ footer .sub-footer .credit strong {
   top: 0;
   left: 30px;
 }
+@media (max-width: 767.98px) {
+  .tickets .tickets__single .features span {
+    left: 15px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #EE7100;
+  }
+}
 .tickets .tickets__single .features .text {
   flex: 0 0 50%;
   max-width: 50%;
@@ -12426,6 +12551,11 @@ footer .sub-footer .credit strong {
   .tickets .tickets__single .features .text {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .tickets .tickets__single .features .text {
+    padding: 15px;
   }
 }
 .tickets .tickets__single .features .image {
@@ -12459,6 +12589,7 @@ footer .sub-footer .credit strong {
 .tickets.secondary-bg h2 {
   color: #fff;
 }
+
 /* Download Pricelist */
 .download-pricelist {
   background-size: cover;
@@ -12491,6 +12622,469 @@ footer .sub-footer .credit strong {
   margin-bottom: 10px;
 }
 .download-pricelist:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.4;
+}
+
+/* Ticket Detail */
+.ticket-detail {
+  padding: 140px 0;
+  background: #f5f5f5;
+}
+@media (max-width: 767.98px) {
+  .ticket-detail {
+    padding: 80px 0;
+  }
+}
+.ticket-detail h2 {
+  color: #EE7100;
+  margin-bottom: 20px;
+}
+.ticket-detail h3 {
+  margin-bottom: 100px;
+}
+@media (max-width: 767.98px) {
+  .ticket-detail h3 {
+    margin-bottom: 80px;
+  }
+}
+.ticket-detail .ticket-detail__info .title {
+  background: #EE7100;
+  color: #fff;
+  font-weight: 700;
+  padding: 15px 30px;
+  font-size: 24px;
+}
+@media (max-width: 767.98px) {
+  .ticket-detail .ticket-detail__info .title {
+    padding: 15px;
+  }
+}
+.ticket-detail .ticket-detail__info .content {
+  background: #fff;
+  display: flex;
+  flex-flow: row wrap;
+}
+.ticket-detail .ticket-detail__info .content .info {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 30px;
+  position: relative;
+}
+@media (max-width: 1419.98px) {
+  .ticket-detail .ticket-detail__info .content .info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .ticket-detail .ticket-detail__info .content .info {
+    padding: 15px;
+  }
+}
+.ticket-detail .ticket-detail__info .content .info span {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #EE7100;
+  position: absolute;
+  top: 0;
+  left: 30px;
+}
+@media (max-width: 767.98px) {
+  .ticket-detail .ticket-detail__info .content .info span {
+    left: 15px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #EE7100;
+  }
+}
+.ticket-detail .ticket-detail__info .content .info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.ticket-detail .ticket-detail__info .content .info ul li {
+  margin-bottom: 10px;
+}
+.ticket-detail .ticket-detail__info .content .info ul li i {
+  margin-right: 10px;
+  position: relative;
+  top: 1px;
+}
+.ticket-detail .ticket-detail__info .content .info ul li i.ti-check {
+  color: #EE7100;
+}
+.ticket-detail .ticket-detail__info .content .info .button-group .button {
+  margin-top: 5px;
+}
+.ticket-detail .ticket-detail__info .content .image {
+  flex: 0 0 50%;
+  max-width: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media (max-width: 1419.98px) {
+  .ticket-detail .ticket-detail__info .content .image {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 300px;
+  }
+}
+.ticket-detail .ticket-detail__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 767.98px) {
+  .ticket-detail .ticket-detail__features {
+    margin-top: 40px;
+  }
+}
+.ticket-detail .ticket-detail__features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+@media (max-width: 767.98px) {
+  .ticket-detail .ticket-detail__features li {
+    margin-bottom: 20px;
+  }
+}
+.ticket-detail .ticket-detail__features li img {
+  width: 80px;
+  height: auto;
+  margin-right: 30px;
+}
+@media (min-width: 768px) and (max-width: 1099.98px) {
+  .ticket-detail .ticket-detail__features li img {
+    width: 50px;
+    margin-right: 15px;
+  }
+}
+.ticket-detail .ticket-detail__features li .text span {
+  display: block;
+  font-weight: 700;
+}
+.ticket-detail .ticket-detail__features li:last-child {
+  margin-bottom: 0;
+}
+
+/* Ticket Accordion */
+.ticket-accordion {
+  padding: 140px 0;
+  background: #eeeeee;
+}
+@media (max-width: 767.98px) {
+  .ticket-accordion {
+    padding: 80px 0;
+  }
+}
+.ticket-accordion .accordion {
+  margin-bottom: 20px;
+}
+@media (max-width: 767.98px) {
+  .ticket-accordion .accordion {
+    margin-bottom: 15px;
+  }
+}
+.ticket-accordion .accordion .title {
+  background: #fff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.ticket-accordion .accordion .title i {
+  color: #EE7100;
+  font-size: 24px;
+  margin-right: 15px;
+}
+.ticket-accordion .accordion .title.open {
+  background: #EE7100;
+  color: #fff;
+}
+.ticket-accordion .accordion .title.open i {
+  color: #fff;
+}
+.ticket-accordion .accordion .content {
+  display: none;
+  background: #fff;
+}
+.ticket-accordion .accordion .content .inner {
+  padding: 20px;
+}
+.ticket-accordion .accordion:last-of-type {
+  margin-bottom: 60px;
+}
+.ticket-accordion .add-text {
+  font-size: 14px;
+}
+
+/* Customers Headline */
+.customers-headline {
+  padding: 140px 0;
+  background: #eeeeee;
+}
+@media (max-width: 767.98px) {
+  .customers-headline {
+    padding: 80px 0;
+  }
+}
+.customers-headline h2 {
+  margin-bottom: 20px;
+}
+.customers-headline h3 {
+  margin-bottom: 0;
+  color: #EE7100;
+}
+
+/* App Header */
+.app-header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.app-header .app-header__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.app-header .app-header__content {
+  flex: 0 0 100%;
+}
+.app-header .app-header__content .app-headline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.app-header .app-header__content .app-headline .image {
+  text-align: center;
+}
+@media (max-width: 767.98px) {
+  .app-header .app-header__content .app-headline .image {
+    display: none;
+  }
+}
+.app-header .app-header__content .app-headline .image img {
+  display: block;
+  height: 65vh;
+  width: auto;
+}
+.app-header .app-header__content .app-headline .image i {
+  font-size: 40px;
+  color: #fff;
+  margin-top: 10px;
+  display: block;
+}
+.app-header .app-header__content .app-headline h1 {
+  color: #fff;
+  margin-left: 50px;
+}
+
+/* App Detail */
+.app-detail {
+  padding: 140px 0;
+  background: #f5f5f5;
+}
+@media (max-width: 767.98px) {
+  .app-detail {
+    padding: 80px 0;
+  }
+}
+.app-detail h2 {
+  color: #EE7100;
+  margin-bottom: 20px;
+}
+.app-detail h3 {
+  margin-bottom: 100px;
+}
+@media (max-width: 767.98px) {
+  .app-detail h3 {
+    margin-bottom: 80px;
+  }
+}
+.app-detail .app-detail__info .title {
+  background: #EE7100;
+  color: #fff;
+  font-weight: 700;
+  padding: 15px 30px;
+  font-size: 24px;
+}
+@media (max-width: 767.98px) {
+  .app-detail .app-detail__info .title {
+    padding: 15px;
+  }
+}
+.app-detail .app-detail__info .content {
+  background: #fff;
+  display: flex;
+  flex-flow: row wrap;
+}
+.app-detail .app-detail__info .content .info {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 30px;
+  position: relative;
+}
+@media (max-width: 1419.98px) {
+  .app-detail .app-detail__info .content .info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .app-detail .app-detail__info .content .info {
+    padding: 15px;
+  }
+}
+.app-detail .app-detail__info .content .info span {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #EE7100;
+  position: absolute;
+  top: 0;
+  left: 30px;
+}
+@media (max-width: 767.98px) {
+  .app-detail .app-detail__info .content .info span {
+    left: 15px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #EE7100;
+  }
+}
+.app-detail .app-detail__info .content .info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.app-detail .app-detail__info .content .info ul li {
+  margin-bottom: 10px;
+}
+.app-detail .app-detail__info .content .info ul li i {
+  margin-right: 10px;
+  position: relative;
+  top: 1px;
+}
+.app-detail .app-detail__info .content .info ul li i.ti-check {
+  color: #28a745;
+}
+.app-detail .app-detail__info .content .info ul li ul {
+  list-style: none;
+  margin: 0;
+  margin-left: 30px;
+}
+.app-detail .app-detail__info .content .info ul li ul li {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.app-detail .app-detail__info .content .info .button-group .button {
+  margin-top: 5px;
+}
+.app-detail .app-detail__info .content .image {
+  flex: 0 0 50%;
+  max-width: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media (max-width: 1419.98px) {
+  .app-detail .app-detail__info .content .image {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 300px;
+  }
+}
+.app-detail .app-detail__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 767.98px) {
+  .app-detail .app-detail__features {
+    margin-top: 40px;
+  }
+}
+.app-detail .app-detail__features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+@media (max-width: 767.98px) {
+  .app-detail .app-detail__features li {
+    margin-bottom: 20px;
+  }
+}
+.app-detail .app-detail__features li img {
+  width: 80px;
+  height: auto;
+  margin-right: 30px;
+}
+@media (min-width: 768px) and (max-width: 1099.98px) {
+  .app-detail .app-detail__features li img {
+    width: 50px;
+    margin-right: 15px;
+  }
+}
+.app-detail .app-detail__features li .text span {
+  display: block;
+  font-weight: 700;
+}
+.app-detail .app-detail__features li:last-child {
+  margin-bottom: 0;
+}
+
+/* App Download */
+.app-download {
+  padding: 140px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  color: #fff;
+  font-size: 1.6875rem;
+  font-weight: 700;
+}
+@media (max-width: 767.98px) {
+  .app-download {
+    padding: 80px 0;
+    font-size: 1.35rem;
+  }
+}
+.app-download h2 {
+  margin-bottom: 20px;
+}
+.app-download .app-download__buttons {
+  margin-top: 40px;
+}
+.app-download .app-download__buttons a {
+  display: inline-block;
+}
+.app-download .app-download__buttons a img {
+  height: 40px;
+  width: auto;
+}
+.app-download:before {
   content: "";
   position: absolute;
   top: 0;

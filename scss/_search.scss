@@ -1,0 +1,37 @@
+/* Search */
+
+.search {
+    .search__form {
+        background: $light-grey;
+        padding: 60px 0;
+        form {
+            display: flex;
+            input {
+                width: 100%;
+                display: block;
+                padding: 10px;
+                border: solid 1px $text-color;
+                border-right: none;
+            }
+            button {
+                border: none;
+            }
+        }
+    }
+    .search__results {
+        padding: 80px 0;
+        position: relative;
+        &:before {
+            content: "";
+            width: 0; 
+            height: 0; 
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid $light-grey;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+        }
+    }
+}

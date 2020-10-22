@@ -16,6 +16,9 @@
             font-weight: $font-weight-bold;
             padding: 15px 30px;
             font-size: 24px;
+            @include media-breakpoint-down(sm) {
+                padding: 15px;
+            }
         }
         .features {
             padding: 30px;
@@ -33,6 +36,9 @@
                     position: relative;
                     padding-left: 30px;
                     margin-bottom: 20px;
+                    @include media-breakpoint-down(sm) {
+                        padding-left: 20px;
+                    }
                     &:before {
                         content: "\e64c";
                         font-family: "themify";
@@ -58,6 +64,12 @@
                 position: absolute;
                 top: 0;
                 left: 30px;
+                @include media-breakpoint-down(sm) {
+                    left: 15px;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-top: 8px solid theme-color("secondary");
+                }
             }
             .text {
                 flex: 0 0 50%;
@@ -66,6 +78,9 @@
                 @include media-breakpoint-down(md) {
                     flex: 0 0 100%;
                     max-width: 100%;
+                }
+                @include media-breakpoint-down(sm) {
+                    padding: 15px;
                 }
             }
             .image {
@@ -97,8 +112,6 @@
         background: theme-color("secondary");
         h2 {
             color: $white;
-        }
-        .tickets__single {
         }
     }
 }
@@ -139,5 +152,187 @@
         height: 100%;
         background: $black;
         opacity: 0.4;
+    }
+}
+
+/* Ticket Detail */
+
+.ticket-detail {
+    padding: $section-padding;
+    background: $light-grey;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+    }
+    h2 {
+        color: theme-color("secondary");
+        margin-bottom: 20px;
+    }
+    h3 {
+        margin-bottom: 100px;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 80px;
+        }
+    }
+    .ticket-detail__info {
+        .title {
+            background: theme-color("secondary");
+            color: $white;
+            font-weight: $font-weight-bold;
+            padding: 15px 30px;
+            font-size: 24px;
+            @include media-breakpoint-down(sm) {
+                padding: 15px;
+            }
+        }
+        .content {
+            background: $white;
+            display: flex;
+            flex-flow: row wrap;
+            .info {
+                flex: 0 0 50%;
+                max-width: 50%;
+                padding: 30px;
+                position: relative;
+                @include media-breakpoint-down(lg) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+                @include media-breakpoint-down(sm) {
+                    padding: 15px;
+                }
+                span {
+                    width: 0; 
+                    height: 0; 
+                    border-left: 12px solid transparent;
+                    border-right: 12px solid transparent;
+                    border-top: 12px solid theme-color("secondary");
+                    position: absolute;
+                    top: 0;
+                    left: 30px;
+                    @include media-breakpoint-down(sm) {
+                        left: 15px;
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                        border-top: 8px solid theme-color("secondary");
+                    }
+                }
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    margin-bottom: 30px;
+                    li {
+                        margin-bottom: 10px;
+                        i {
+                            margin-right: 10px;
+                            position: relative;
+                            top: 1px;
+                            &.ti-check {
+                                color: theme-color("secondary");
+                            }
+                        }
+                    }
+                }
+                .button-group {
+                    .button {
+                        margin-top: 5px;
+                    }
+                }
+            }
+            .image {
+                flex: 0 0 50%;
+                max-width: 50%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                @include media-breakpoint-down(lg) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    height: 300px;
+                }
+            }
+        }
+    }
+    .ticket-detail__features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @include media-breakpoint-down(sm) {
+            margin-top: 40px;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 20px;
+            }
+            img {
+                width: 80px;
+                height: auto;
+                margin-right: 30px;
+                @include media-breakpoint-only(md) {
+                    width: 50px;
+                    margin-right: 15px;
+                }
+            }
+            .text {
+                span {
+                    display: block;
+                    font-weight: $font-weight-bold;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/* Ticket Accordion */
+
+.ticket-accordion {
+    padding: $section-padding;
+    background: $dark-grey;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+    }
+    .accordion {
+        margin-bottom: 20px;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 15px;
+        }
+        .title {
+            background: $white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            i {
+                color: theme-color("secondary");
+                font-size: 24px;
+                margin-right: 15px;
+            }
+            &.open {
+                background: theme-color("secondary");
+                color: $white;
+                i {
+                    color: $white;
+                }
+            }
+        }
+        .content {
+            display: none;
+            background: $white;
+            .inner {
+                padding: 20px;
+            }
+        }
+        &:last-of-type {
+            margin-bottom: 60px;
+        }
+    }
+    .add-text {
+        font-size: 14px;
     }
 }

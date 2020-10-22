@@ -1,0 +1,16 @@
+/* Customers Headline */
+
+.customers-headline {
+    padding: $section-padding;
+    background: $dark-grey;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    h3 {
+        margin-bottom: 0;
+        color: theme-color("secondary");
+    }
+}
