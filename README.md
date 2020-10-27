@@ -34,3 +34,4 @@
 * [Partner](https://pechschwarz-media.github.io/ver/partner.html)
 * [Impressum / Datenschutz](https://pechschwarz-media.github.io/ver/impressum.html)
 * [Downloads](https://pechschwarz-media.github.io/ver/downloads.html)
+* [Netzplan](https://pechschwarz-media.github.io/ver/netzplan.html)
