@@ -84,6 +84,7 @@
                     border: none;
                     background: theme-color("secondary");
                     cursor: pointer;
+                    transition: all 0.3s ease;
                     i {
                         position: absolute;
                         top: 50%;
@@ -91,6 +92,9 @@
                         transform: translate(-50%, -50%);
                         color: $white;
                         font-size: 22px;
+                    }
+                    &:hover {
+                        background: theme-color("primary");
                     }
                 }
             }
@@ -163,11 +167,26 @@
             margin-left: 0;
         }
     }
-    select {
-        padding: 10px;
-        outline: none;
-        border: solid 1px #ccc;
+    .select-container {
+        position: relative;
+        display: inline-block;
         margin-bottom: 40px;
+        select {
+            padding: 10px 60px 10px 10px;
+            outline: none;
+            border: solid 1px #ccc;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+        &:after {
+            content: "\e64b";
+            font-family: "themify";
+            color: theme-color("secondary");
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
     .location {
         display: none;

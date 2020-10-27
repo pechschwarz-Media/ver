@@ -4,11 +4,24 @@ body {
     position: relative;
     left: 0;
     transition: all 0.3s ease;
+    @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+    }
     &.open-nav {
         left: -80%;
     }
-    @include media-breakpoint-down(sm) {
-        font-size: 1rem;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 20vh;
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#00ffffff",GradientType=0 );
+        z-index: 100;
     }
 }
 
@@ -29,11 +42,12 @@ body {
         left: 50%;
         bottom: 100%;
         transform: translateX(-50%);
-        padding: 25px 80px;
+        padding: 20px 80px;
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
         cursor: pointer;
         white-space: nowrap;
+        transition: all 0.5s ease;
         @include media-breakpoint-down(lg) {
             padding: 15px 60px;
         }
@@ -41,15 +55,15 @@ body {
             padding: 15px 40px;
         }
         span {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             background: theme-color("primary");
             display: block;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            top: -50px;
+            top: -40px;
             @include media-breakpoint-down(lg) {
                 width: 70px;
                 height: 70px;
@@ -275,6 +289,11 @@ body {
             }
         }
     }
+    &.moved {
+        .connection-check__toggle {
+            transform: translateX(-50%) translateY(200%);
+        }
+    }
 }
 
 /* Datepicker */
@@ -344,12 +363,17 @@ body {
         cursor: pointer;
         z-index: 100;
         font-size: 30px;
-        opacity: 1;
+        opacity: 1 !important;
         text-shadow: none;
+        transform-origin: center center;
+        transition: all 0.3s ease;
         @include media-breakpoint-down(sm) {
             top: 20px;
             right: 20px;
             font-size: 24px;
+        }
+        &:hover {
+            transform: rotateZ(180deg);
         }
     }
     form {
@@ -379,6 +403,11 @@ body {
             background: $white;
             color: theme-color("secondary");
             border: none;
+            transition: all 0.3s ease;
+            &:hover {
+                background: theme-color("primary");
+                color: $white;
+            }
         }
     }
 }
@@ -386,7 +415,7 @@ body {
 /* Number */
 
 .global-number {
-    padding: 80px 0;
+    padding: 50px 0;
     span {
         display: block;
         height: 50px;
@@ -526,6 +555,7 @@ body {
             text-align: center;
             padding: 10px;
             margin-bottom: 3%;
+            transition: all 0.3s ease;
             @include media-breakpoint-down(md) {
                 flex: 0 0 48%;
                 margin-bottom: 4%;
@@ -533,6 +563,9 @@ body {
             @include media-breakpoint-down(sm) {
                 flex: 0 0 100%;
                 margin-bottom: 15px;
+            }
+            &:hover {
+                background: theme-color("primary");
             }
         }
     }
@@ -747,11 +780,26 @@ body {
                 margin-bottom: 20px;
             }
         }
-        select {
-            padding: 10px;
-            min-width: 200px;
-            border: solid 1px $text-color;
-            outline: none;
+        .select-container {
+            position: relative;
+            display: inline-block;
+            select {
+                padding: 10px;
+                min-width: 200px;
+                border: solid 1px $text-color;
+                outline: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+            }
+            &:after {
+                content: "\e64b";
+                font-family: "themify";
+                color: theme-color("secondary");
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
         }
     }
     .downloads__list {
@@ -792,6 +840,7 @@ body {
                 padding: 20px 15px;
                 font-weight: $font-weight-bold;
                 position: relative;
+                transition: all 0.3s ease;
                 &:before {
                     content: "";
                     width: 0; 
@@ -814,6 +863,9 @@ body {
                     font-size: 22px;
                     font-weight: normal;
                 }
+                &:hover {
+                    background: theme-color("primary");
+                }
             }
         }
     }
@@ -834,6 +886,10 @@ body {
             a {
                 color: $text-color;
                 font-weight: $font-weight-bold;
+                transition: all 0.3s ease;
+                &:hover {
+                    color: theme-color("secondary");
+                }
             }
             &:last-child {
                 margin-right: 0;

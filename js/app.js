@@ -15,6 +15,8 @@ $('header .mobile-controls .nav-toggle').click(function() {
 });
 
 $('header .main-nav ul li span').click(function() {
+    $('header .main-nav ul li span').removeClass('open');
+    $('header .main-nav ul li .sub-menu').slideUp(400);
     $(this).toggleClass('open');
     $(this).parent().find('.sub-menu').slideToggle(400);
 });
@@ -36,7 +38,16 @@ $(function() {
     });
 });
 
-/* Datepicker */
+/* Connection Check */
+
+$(document).scroll(function() {
+    var scrollBottom = $(window).scrollTop() + $(window).height();
+    if (scrollBottom >= ($(document).height() - 600)) {
+        $('.connection-check').addClass('moved');
+    } else {
+        $('.connection-check').removeClass('moved');
+    }
+});
 
 $(document).ready(function() {
     $('.connection-check .connection-check__inner .input-date input').datepicker({
@@ -284,3 +295,25 @@ $('#select-center').change(function() {
     $('.contact-map .location').hide();
     $('.contact-map .location[data-center="' + center + '"]').show();
 });
+
+/* Select (Citizen) */
+
+$('#select-citizen').change(function() {
+    var value = $(this).val();
+    $('[data-citizen]').hide();
+    $('[data-citizen="' + value + '"]').show();
+});
+
+/* Jobs (Equalizer) */
+
+function job_equalizer() {
+    var heightMax = 0;
+    $('.job-detail__box .content').each(function() {
+        var height = $(this).outerHeight();
+        if(height > heightMax) {
+            heightMax = height;
+        }
+    });
+    $('.job-detail__box .content').css('min-height', heightMax + "px");
+}
+job_equalizer();

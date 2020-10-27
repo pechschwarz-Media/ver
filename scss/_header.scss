@@ -124,7 +124,7 @@ header {
             li {
                 display: inline-block;
                 position: relative;
-                padding: 10px 0;
+                padding: 20px 0;
                 margin-right: 20px;
                 @include media-breakpoint-down(lg) {
                     margin-right: 8px;
@@ -201,6 +201,14 @@ header {
                             &:hover {
                                 a {
                                     color: theme-color("secondary");
+                                }
+                            }
+                            &.active {
+                                a {
+                                    color: theme-color("secondary");
+                                }
+                                &:before {
+                                    content: none;
                                 }
                             }
                         }

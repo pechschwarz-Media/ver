@@ -294,11 +294,12 @@
                     <h2>Bürgerbus</h2>
                     <div class="downloads__filter">
                         <div class="title">Für welche Stadt suchen Sie Einsatzwagenpläne?</div>
-                        <select>
-                            <option value="*" selected>Alle anzeigen</option>
-                            <option value="1">Linie 1</option>
-                            <option value="2">Linie 2</option>
-                        </select>
+                        <div class="select-container">
+                            <select id="select-citizen">
+                                <option value="1">Ennepetal</option>
+                                <option value="2">Schwelm</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="downloads__list">
                         <div class="download" data-filter="1">
@@ -322,7 +323,7 @@
                             </div>
                             <a href="#">Herunterladen</a>
                         </div>
-                        <div class="download" data-filter="2">
+                        <div class="download" data-filter="2" style="display:none;">
                             <div class="text">
                                 <div class="title">VER-Linienfahrplan</div>
                                 <div class="desc">SB37 Ennepetal Bus-Bf. - Bochum Hbf.</div>
@@ -335,11 +336,29 @@
         </div>
     </section>
 
-    <section class="text-image dark-grey-bg">
+    <section class="text-image dark-grey-bg" data-citizen="1" style="display:block">
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                     <div class="headline"><h2>Bürgerbusverein Ennepetal e.V.</h2></div>
+                    <h3>Was ist das?</h3>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <a href="#" class="button primary">Zur Website</a>
+                </div>
+                <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12">
+                    <div class="negative-right">
+                        <img src="http://www.placehold.it/1200x800">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-image dark-grey-bg" data-citizen="2" style="display:none">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="headline"><h2>Bürgerbusverein Schwelm e.V.</h2></div>
                     <h3>Was ist das?</h3>
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                     <a href="#" class="button primary">Zur Website</a>
