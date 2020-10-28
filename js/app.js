@@ -340,3 +340,60 @@ $(document).ready(function(){
         $accordion_content.stop(true, true).slideToggle(500);
     });
 });
+
+/* History */
+
+$(document).ready(function() {
+    $('.history svg .point').each(function() {
+        var point = $(this),
+            pos = point.position(),
+            id = $(this).data("content"),
+            date = $('.history__date[data-content="' + id + '"]');
+
+        date.css("top", pos.top);
+        date.css("left", pos.left);
+    });
+});
+
+function historyPrepare($el) {
+    var length = $el[0].getTotalLength();
+    $el.css("stroke-dasharray", length);
+    $el.css("stroke-dashoffset", length);
+}
+
+var $line = $('#primary-line');
+historyPrepare($line);
+
+var controller = new ScrollMagic.Controller();
+var historyHeight = $('.history').height();
+
+var historyLine = new ScrollMagic.Scene({
+    triggerElement: ".history",
+    duration: historyHeight + "px",
+    tweenChanges: true,
+    triggerHook: 0.5
+})
+.setTween('#primary-line', {'strokeDashoffset': 0, ease: Linear.easeNone})
+.addTo(controller);
+
+$('.history svg .point').each(function() {
+    var element = this;
+
+    var historyPoint = new ScrollMagic.Scene({
+        triggerElement: element,
+        triggerHook: 0.5,
+    })
+    .setClassToggle(element, "visible")
+    .duration("1000%")
+    .addTo(controller);
+});
+
+$('.history svg .point').click(function() {
+    var id = $(this).data("content");
+    $('.history .history__content').removeClass("visible");
+    $('.history .history__content[data-content="' + id + '"]').addClass("visible");
+});
+
+$('.history .history__content .close').click(function() {
+    $(this).parent().removeClass('visible');
+});

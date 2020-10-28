@@ -13948,4 +13948,132 @@ footer .sub-footer .credit strong {
   font-size: 24px;
 }
 
+/* History Headline */
+.history-headline {
+  padding: 80px 0;
+}
+.history-headline h2 {
+  margin-bottom: 30px;
+}
+.history-headline h3 {
+  margin-bottom: 0;
+  color: #EE7100;
+}
+
+/* History */
+.history__date {
+  position: absolute;
+  background: #2284B5;
+  padding: 20px 40px;
+  color: #fff;
+  font-weight: 700;
+  transform: translate(40px, -18px);
+  line-height: 1;
+}
+.history__date:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #2284B5;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.history {
+  overflow: hidden;
+}
+.history .history__content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 500px;
+  background: #eeeeee;
+  z-index: 9999999;
+  padding: 80px 30px 30px 30px;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+  overflow: auto;
+}
+@media (max-width: 767.98px) {
+  .history .history__content {
+    width: 100%;
+    padding: 40px 15px 15px 15px;
+  }
+}
+.history .history__content .close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 20px;
+  color: #EE7100;
+  opacity: 1 !important;
+  cursor: pointer;
+  text-shadow: none;
+}
+@media (max-width: 767.98px) {
+  .history .history__content .close {
+    top: 15px;
+    right: 15px;
+  }
+}
+.history .history__content h3 {
+  margin-bottom: 40px;
+}
+.history .history__content img {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+.history .history__content.visible {
+  transform: translateX(0);
+}
+.history svg {
+  width: 100%;
+  height: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 1439.98px) {
+  .history svg {
+    height: 350vh;
+    width: auto;
+  }
+}
+@media (max-width: 1099.98px) {
+  .history svg {
+    height: 400vh;
+    width: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .history svg {
+    height: 500vh;
+    width: auto;
+  }
+}
+.history svg .point {
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.history svg .point:before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  display: block;
+  background: #000000;
+}
+.history svg .point.visible {
+  opacity: 1;
+}
+
 /*# sourceMappingURL=app.css.map */
