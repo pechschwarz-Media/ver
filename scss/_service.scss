@@ -1,0 +1,162 @@
+/* Tour */
+
+.service-tour {
+    padding: $section-padding;
+    padding-top: 0;
+    background: $light-grey;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+        padding-top: 0;
+    }
+}
+
+/* FAQ */
+
+.faq {
+    padding: $section-padding;
+    background: $dark-grey;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+    }
+    .headline {
+        margin-bottom: 30px;
+        h2 {
+            color: $text-color;
+            margin-bottom: 0;
+        }
+        h3 {
+            margin-top: 10px;
+            color: theme-color("secondary");
+        }
+    }
+    .faq__single {
+        margin-bottom: 20px;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 15px;
+        }
+        .question {
+            background: $white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            i {
+                color: theme-color("secondary");
+                font-size: 24px;
+                margin-right: 15px;
+            }
+            &.open {
+                background: theme-color("secondary");
+                color: $white;
+                i {
+                    color: $white;
+                }
+            }
+        }
+        .answer {
+            display: none;
+            background: $white;
+            .inner {
+                padding: 20px;
+                p {
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Customer Center */
+
+.customer-center {
+    padding: $section-padding;
+    background: $dark-grey;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+    }
+    .image {
+        display: none;
+        margin-left: -200px;
+        @include media-breakpoint-down(lg) {
+            margin-left: -80px;
+        }
+        @include media-breakpoint-down(md) {
+            margin-left: 0;
+            margin-bottom: 40px;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        &.visible {
+            display: block;
+        }
+    }
+    .select-container {
+        position: relative;
+        display: inline-block;
+        select {
+            padding: 10px;
+            min-width: 200px;
+            border: solid 1px $text-color;
+            outline: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+        &:after {
+            content: "\e64b";
+            font-family: "themify";
+            color: theme-color("secondary");
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    .customer-center__container {
+        display: none;
+        flex-flow: row wrap;
+        margin: 0 -15px;
+        margin-top: 20px;
+        .center {
+            flex: 0 0 50%;
+            width: 50%;
+            max-width: 50%;
+            padding: 0 15px;
+            margin-top: 30px;
+            @include media-breakpoint-only(lg) {
+                flex: 0 0 100%;
+                width: 100%;
+                max-width: 100%;
+            }
+            @include media-breakpoint-down(sm) {
+                flex: 0 0 100%;
+                width: 100%;
+                max-width: 100%;
+            }
+            .title {
+                background: theme-color("secondary");
+                color: $white;
+                padding: 15px;
+            }
+            .content {
+                padding: 15px;
+                background: $white;
+                address {
+                    margin-bottom: 30px;
+                }
+                .open {
+                    span {
+                        display: block;
+                        font-weight: $font-weight-bold;
+                    }
+                }
+            }
+        }
+        &.visible {
+            display: flex;
+        }
+    }
+}

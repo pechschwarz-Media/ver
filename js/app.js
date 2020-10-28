@@ -317,3 +317,26 @@ function job_equalizer() {
     $('.job-detail__box .content').css('min-height', heightMax + "px");
 }
 job_equalizer();
+
+/* Select Center */
+
+$('#select-customer-center').change(function() {
+    var id = $(this).val();
+    $('.customer-center .customer-center__container').hide();
+    $('.customer-center .customer-center__container[data-center="' + id + '"]').show();
+
+    $('.customer-center .image').hide();
+    $('.customer-center .image[data-center="' + id + '"]').show();
+});
+
+/* FAQ (Accordion) */
+
+$(document).ready(function(){
+    $('.faq .faq__single .question').click(function() {
+        $(this).toggleClass('open');
+        $accordion_content = $(this).next('.answer');
+        $('.faq .faq__single .answer').not($accordion_content).slideUp();
+        $('.faq .faq__single .answer').not($accordion_content).prev('.question').removeClass('open');
+        $accordion_content.stop(true, true).slideToggle(500);
+    });
+});
