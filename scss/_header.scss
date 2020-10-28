@@ -161,7 +161,7 @@ header {
                         transform-origin: center center;
                     }
                 }
-                &.has-sub {
+                &.menu-item-has-children {
                     .sub-menu {
                         display: none;
                         position: absolute;
@@ -203,7 +203,7 @@ header {
                                     color: theme-color("secondary");
                                 }
                             }
-                            &.active {
+                            &.current-menu-item {
                                 a {
                                     color: theme-color("secondary");
                                 }
@@ -255,7 +255,8 @@ header {
                         }
                     }
                 }
-                &.active {
+                &.current-menu-item,
+                &.current_page_item {
                     a {
                         color: theme-color("secondary");
                         @include media-breakpoint-down(md) {
@@ -305,7 +306,8 @@ header {
                             color: $white;
                         }
                     }
-                    &.active {
+                    &.current-menu-item,
+                    &.current_page_item {
                         a {
                             color: theme-color("secondary");
                             @include media-breakpoint-down(md) {

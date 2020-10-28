@@ -11151,7 +11151,7 @@ header .main-nav ul li span.open {
   transform: rotateZ(90deg);
   transform-origin: center center;
 }
-header .main-nav ul li.has-sub .sub-menu {
+header .main-nav ul li.menu-item-has-children .sub-menu {
   display: none;
   position: absolute;
   top: 100%;
@@ -11162,7 +11162,7 @@ header .main-nav ul li.has-sub .sub-menu {
   padding: 6px;
 }
 @media (max-width: 1099.98px) {
-  header .main-nav ul li.has-sub .sub-menu {
+  header .main-nav ul li.menu-item-has-children .sub-menu {
     position: relative;
     top: 0;
     left: 0;
@@ -11170,41 +11170,41 @@ header .main-nav ul li.has-sub .sub-menu {
     padding: 0;
   }
 }
-header .main-nav ul li.has-sub .sub-menu li {
+header .main-nav ul li.menu-item-has-children .sub-menu li {
   display: inline-block;
   padding: 0;
   margin-right: 0;
 }
 @media (max-width: 1099.98px) {
-  header .main-nav ul li.has-sub .sub-menu li {
+  header .main-nav ul li.menu-item-has-children .sub-menu li {
     display: block;
     border-bottom: solid 1px #ccc;
   }
 }
-header .main-nav ul li.has-sub .sub-menu li a {
+header .main-nav ul li.menu-item-has-children .sub-menu li a {
   color: #737373;
   font-size: 1rem;
   padding: 6px;
   line-height: 1;
 }
 @media (max-width: 1099.98px) {
-  header .main-nav ul li.has-sub .sub-menu li a {
+  header .main-nav ul li.menu-item-has-children .sub-menu li a {
     padding: 15px;
   }
 }
-header .main-nav ul li.has-sub .sub-menu li:last-child {
+header .main-nav ul li.menu-item-has-children .sub-menu li:last-child {
   border-bottom: none;
 }
-header .main-nav ul li.has-sub .sub-menu li:hover a {
+header .main-nav ul li.menu-item-has-children .sub-menu li:hover a {
   color: #EE7100;
 }
-header .main-nav ul li.has-sub .sub-menu li.active a {
+header .main-nav ul li.menu-item-has-children .sub-menu li.current-menu-item a {
   color: #EE7100;
 }
-header .main-nav ul li.has-sub .sub-menu li.active:before {
+header .main-nav ul li.menu-item-has-children .sub-menu li.current-menu-item:before {
   content: none;
 }
-header .main-nav ul li.has-sub .sub-menu:before {
+header .main-nav ul li.menu-item-has-children .sub-menu:before {
   content: "";
   width: 0;
   height: 0;
@@ -11217,7 +11217,7 @@ header .main-nav ul li.has-sub .sub-menu:before {
   position: absolute;
 }
 @media (max-width: 1099.98px) {
-  header .main-nav ul li.has-sub .sub-menu:before {
+  header .main-nav ul li.menu-item-has-children .sub-menu:before {
     bottom: auto;
     left: 15px;
     transform: none;
@@ -11228,11 +11228,11 @@ header .main-nav ul li.has-sub .sub-menu:before {
     border-bottom: none;
   }
 }
-header .main-nav ul li.has-sub:hover .sub-menu {
+header .main-nav ul li.menu-item-has-children:hover .sub-menu {
   display: block;
 }
 @media (max-width: 1099.98px) {
-  header .main-nav ul li.has-sub:hover .sub-menu {
+  header .main-nav ul li.menu-item-has-children:hover .sub-menu {
     display: none;
   }
 }
@@ -11247,16 +11247,16 @@ header .main-nav ul li:hover a {
     color: #fff;
   }
 }
-header .main-nav ul li.active a {
+header .main-nav ul li.current-menu-item a, header .main-nav ul li.current_page_item a {
   color: #EE7100;
 }
 @media (max-width: 1099.98px) {
-  header .main-nav ul li.active a {
+  header .main-nav ul li.current-menu-item a, header .main-nav ul li.current_page_item a {
     background: #d66500;
     color: #fff;
   }
 }
-header .main-nav ul li.active:before {
+header .main-nav ul li.current-menu-item:before, header .main-nav ul li.current_page_item:before {
   content: "";
   width: 2px;
   height: 25px;
@@ -11268,7 +11268,7 @@ header .main-nav ul li.active:before {
   transform: translateY(-50%);
 }
 @media (max-width: 1099.98px) {
-  header .main-nav ul li.active:before {
+  header .main-nav ul li.current-menu-item:before, header .main-nav ul li.current_page_item:before {
     display: none;
   }
 }
@@ -11298,11 +11298,11 @@ header.scroll .main-nav ul li a {
     color: #fff;
   }
 }
-header.scroll .main-nav ul li.active a {
+header.scroll .main-nav ul li.current-menu-item a, header.scroll .main-nav ul li.current_page_item a {
   color: #EE7100;
 }
 @media (max-width: 1099.98px) {
-  header.scroll .main-nav ul li.active a {
+  header.scroll .main-nav ul li.current-menu-item a, header.scroll .main-nav ul li.current_page_item a {
     color: #fff;
   }
 }
