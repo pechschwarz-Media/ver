@@ -23,7 +23,7 @@
   * Tarif u. Beförderungsbedingungen (Extern)
 * [VER-App](https://pechschwarz-media.github.io/ver/app.html)
 * [Service](https://pechschwarz-media.github.io/ver/service.html)
-* Wir über uns (Folgt)
+* [Wir über uns](https://pechschwarz-media.github.io/ver/wir-ueber-uns.html)
   * Über die VER (Folgt)
   * VERgangenheit (Folgt)
 * [Karriere](https://pechschwarz-media.github.io/ver/karriere.html)
