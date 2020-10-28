@@ -632,6 +632,16 @@ body {
             }
         }
     }
+    table {
+        tr {
+            td {
+                font-weight: $font-weight-bold;
+                &:first-child {
+                    padding-right: 30px;
+                }
+            }
+        }
+    }
     &.no-pt {
         padding-top: 0;
     }

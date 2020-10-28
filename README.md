@@ -24,7 +24,7 @@
 * [VER-App](https://pechschwarz-media.github.io/ver/app.html)
 * [Service](https://pechschwarz-media.github.io/ver/service.html)
 * [Wir über uns](https://pechschwarz-media.github.io/ver/wir-ueber-uns.html)
-  * Über die VER (Folgt)
+  * [Über die VER](https://pechschwarz-media.github.io/ver/ueber-die-ver.html)
   * VERgangenheit (Folgt)
 * [Karriere](https://pechschwarz-media.github.io/ver/karriere.html)
   * [Ausbildung (Karriere Unterseite)](https://pechschwarz-media.github.io/ver/ausbildung.html)
