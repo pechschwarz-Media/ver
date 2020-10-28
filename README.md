@@ -22,7 +22,7 @@
   * Ticketberater (Extern)
   * Tarif u. Beförderungsbedingungen (Extern)
 * [VER-App](https://pechschwarz-media.github.io/ver/app.html)
-* Service (Folgt)
+* [Service](https://pechschwarz-media.github.io/ver/service.html)
 * Wir über uns (Folgt)
   * Über die VER (Folgt)
   * VERgangenheit (Folgt)
