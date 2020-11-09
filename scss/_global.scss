@@ -603,12 +603,9 @@ body {
         }
     }
     .accordion {
-        margin-top: 80px;
-        @include media-breakpoint-down(md) {
-            margin-top: 60px;
-        }
+        margin-top: 40px;
         @include media-breakpoint-down(sm) {
-            margin-top: 40px;
+            margin-top: 30px;
         }
         .accordion__single {
             margin-bottom: 20px;
@@ -792,6 +789,15 @@ body {
             padding: 30px;
             z-index: 20;
             color: $white;
+            p {
+                min-height: 120px;
+                @include media-breakpoint-down(lg) {
+                    min-height: 50px;
+                }
+                @include media-breakpoint-down(md) {
+                    min-height: 0;
+                }
+            }
         }
     }
     &.white-bg {

@@ -10543,16 +10543,11 @@ body:before {
   background: #2284B5;
 }
 .text-image .accordion {
-  margin-top: 80px;
-}
-@media (max-width: 1099.98px) {
-  .text-image .accordion {
-    margin-top: 60px;
-  }
+  margin-top: 40px;
 }
 @media (max-width: 767.98px) {
   .text-image .accordion {
-    margin-top: 40px;
+    margin-top: 30px;
   }
 }
 .text-image .accordion .accordion__single {
@@ -10743,6 +10738,19 @@ body:before {
   padding: 30px;
   z-index: 20;
   color: #fff;
+}
+.page-overview .page-overview__single .text p {
+  min-height: 120px;
+}
+@media (max-width: 1439.98px) {
+  .page-overview .page-overview__single .text p {
+    min-height: 50px;
+  }
+}
+@media (max-width: 1099.98px) {
+  .page-overview .page-overview__single .text p {
+    min-height: 0;
+  }
 }
 .page-overview.white-bg {
   background: #fff;
@@ -11311,11 +11319,15 @@ header .search {
   cursor: pointer;
   position: relative;
   top: 2px;
+  transition: all 0.3s ease;
 }
 @media (max-width: 1099.98px) {
   header .search {
     color: #EE7100;
   }
+}
+header .search:hover {
+  color: #EE7100;
 }
 header.scroll {
   background: #fff;
@@ -11454,11 +11466,18 @@ footer form .input-container input {
     width: 100%;
   }
 }
-footer form .input-container i {
+footer form .input-container button {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  padding: 0;
+  height: auto;
+  line-height: 1;
 }
 footer form .input-container ::placeholder {
   color: #fff;
@@ -12244,11 +12263,26 @@ footer .sub-footer .credit strong {
 .news-overview .news-overview__filter {
   margin-bottom: 50px;
 }
-.news-overview .news-overview__filter select {
+.news-overview .news-overview__filter .select-container {
+  position: relative;
+  display: inline-block;
+}
+.news-overview .news-overview__filter .select-container select {
   padding: 10px;
   min-width: 200px;
   border: solid 1px #737373;
   outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.news-overview .news-overview__filter .select-container:after {
+  content: "";
+  font-family: "themify";
+  color: #EE7100;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .news-overview .news-overview__slider .slide {
   outline: none;

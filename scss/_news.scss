@@ -10,11 +10,26 @@
     }
     .news-overview__filter {
         margin-bottom: 50px;
-        select {
-            padding: 10px;
-            min-width: 200px;
-            border: solid 1px $text-color;
-            outline: none;
+        .select-container {
+            position: relative;
+            display: inline-block;
+            select {
+                padding: 10px;
+                min-width: 200px;
+                border: solid 1px $text-color;
+                outline: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+            }
+            &:after {
+                content: "\e64b";
+                font-family: "themify";
+                color: theme-color("secondary");
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
         }
     }
     .news-overview__slider {

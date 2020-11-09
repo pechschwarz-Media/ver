@@ -290,7 +290,11 @@ header {
         cursor: pointer;
         position: relative;
         top: 2px;
+        transition: all 0.3s ease;
         @include media-breakpoint-down(md) {
+            color: theme-color("secondary");
+        }
+        &:hover {
             color: theme-color("secondary");
         }
     }

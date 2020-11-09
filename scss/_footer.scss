@@ -90,11 +90,18 @@ footer {
                     width: 100%;
                 }
             }
-            i {
+            button {
                 position: absolute;
                 right: 0;
                 top: 50%;
                 transform: translateY(-50%);
+                background: none;
+                border: none;
+                box-shadow: none;
+                color: $white;
+                padding: 0;
+                height: auto;
+                line-height: 1;
             }
             ::placeholder {
                 color: $white;
