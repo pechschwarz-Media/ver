@@ -30,6 +30,11 @@ $dark-grey: #eeeeee;
 
 $text-color: #737373;
 
+/* Links */
+
+$link-color: #EE7100;
+$link-hover-color: #2284B5;
+
 /* Font */
 
 $body-color: $text-color;
@@ -39,12 +44,12 @@ $font-size-base: 1rem;
 $font-size-md: $font-size-base * 1.2;
 $font-size-lg: $font-size-base * 1.5;
 
-$headings-line-height: 1.1;
+$headings-line-height: 1.3;
 $headings-margin-bottom: 0;
 $headings-font-weight: 700;
-$h1-font-size: 50px;
-$h2-font-size: 36px;
-$h3-font-size: 28px;
-$h4-font-size: 24px;
+$h1-font-size: 40px;
+$h2-font-size: 34px;
+$h3-font-size: 26px;
+$h4-font-size: 22px;
 
 $link-hover-decoration: none;

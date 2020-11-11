@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/app.css">
+    <title>VER</title>
+</head>
+<body>
+
+    <div class="search-overlay">
+        <div class="close"><i class="ti-close"></i></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-5 col-lg-8 col-md-12 col-sm-12">
+                    <h2>Suchen</h2>
+                    <form>
+                        <input type="text" placeholder="Suchen">
+                        <button type="submit">Suchen</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="connection-check">
+        <div class="connection-check__toggle">
+            <span><i class="ti-location-arrow"></i></span>
+            <div class="text">Finde deine VERbindung <i class="ti-angle-down"></i></div>
+        </div>
+        <div class="connection-check__inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <form>
+                            <div class="form-container">
+                                <div class="input-start-city">
+                                    <i class="ti-location-pin"></i>
+                                    <input type="text" placeholder="von (Stadt)">
+                                </div>
+                                <div class="input-start-point">
+                                    <input type="text" placeholder="von (Punkt)">
+                                    <span><i class="ti-arrows-horizontal"></i></span>
+                                </div>
+                                <div class="input-end-city">
+                                    <i class="ti-location-pin"></i>
+                                    <input type="text" placeholder="nach (Stadt)">
+                                </div>
+                                <div class="input-end-point">
+                                    <input type="text" placeholder="nach (Punkt)">
+                                </div>
+                                <div class="input-date">
+                                    <div class="left"><i class="ti-angle-left"></i></div>
+                                    <input type="text" value="" id="date">
+                                    <div class="right"><i class="ti-angle-right"></i></div>
+                                </div>
+                                <div class="date-toggle" data-toggle="datepicker">
+                                    <i class="ti-calendar"></i>
+                                </div>
+                                <div class="input-time">
+                                    <div class="left"><i class="ti-angle-left"></i></div>
+                                    <input type="time" value="13:30">
+                                    <div class="right"><i class="ti-angle-right"></i></div>
+                                </div>
+                            </div>
+                            <div class="form-container">
+                                <button type="submit" class="button primary">Verbindung finden</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="header">
+        <div class="header__background" style="background-image:url(http://www.placehold.it/1920x1080);"></div>
+        <div class="header__text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <h1>Jetzt bewerben</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="global-number">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center">
+                    <span><i class="ti-mobile"></i></span>
+                    <div class="global-number__number">Die Schlaue Nummer für Bus & Bahn: 0180 6 / 50 40 30</div>
+                    <div class="global-number__costs">(0,20€/Anruf aus dem Festnetz, 0,60€/Anruf Mobilfunknetz)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apply-form">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-10 col-lg-12 col-md-12 col-sm-12">
+                    <form>
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <h2>Dein zukünftiger Job</h2>
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <label>
+                                    Jobtitel*
+                                    <input type="text" name="jobtitle" required>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <h2>Deine Daten</h2>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                <label>
+                                    Vorname*
+                                    <input type="text" name="firstname" required>
+                                </label>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                <label>
+                                    Nachname*
+                                    <input type="text" name="lastname" required>
+                                </label>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                <label>
+                                    Telefonnummer
+                                    <input type="text" name="phone" required>
+                                </label>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                <label>
+                                    E-Mail Adresse*
+                                    <input type="email" name="email" required>
+                                </label>
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <label>
+                                    Adresse*
+                                    <input type="text" name="address" required>
+                                </label>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                <label>
+                                    PLZ*
+                                    <input type="text" name="zip" required>
+                                </label>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                <label>
+                                    Stadt*
+                                    <input type="text" name="city" required>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <h2>Deine Nachricht</h2>
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <label>
+                                    Nachricht
+                                    <textarea name="message" rows="8"></textarea>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <h2>Deine Bewerbung</h2>
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <label class="privacy"><input type="checkbox" required><span></span><div class="caption">Ich habe die <a href="#">Datenschutzbestimmungen</a> gelesen und akzeptiere diese.</div></label>
+                                <button type="submit" class="button secondary">Bewerben</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <div class="footer-logos">
+                        <img src="img/logo.png">
+                        <img src="img/logo-ver-app-footer.png">
+                    </div>
+                    <address>
+                        <strong>Verkehrsgesellschaft Ennepe-Ruhr mbH</strong><br />
+                        Vertretungsberechtigter Geschäftsführer:<br />
+                        Dipl.-Geogr. Peter Bökenkötter<br />
+                        Wuppermannshof 7<br />
+                        58256 Ennepetal<br /><br />
+                        Telefon: <a href="#">(02333) 978-50</a><br />
+                        Telefax: <a href="#">(02333) 978-515</a><br />
+                        E-Mail: <a href="#">info@ver-kehr.de</a>
+                    </address>
+                </div>
+                <div class="col-xl-8 col-md-6 col-sm-12">
+                    <ul class="sitemap">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Aktuelles</a></li>
+                        <li><a href="#">Fahrplan & Mobilität</a></li>
+                        <li><a href="#">Tickets & Tarife</a></li>
+                        <li><a href="#">VER-App</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Wir über uns</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                    </ul>
+                    <div class="row justify-content-between">
+                        <div class="col-xl-auto col-md-12 col-sm-12">
+                            <div class="search-title">Mobilität hat viele Namen</div>
+                            <form>
+                                <div class="input-container">
+                                    <input type="text" placeholder="Suche">
+                                    <i class="ti-search"></i>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-xl-auto col-md-12 col-sm-12">
+                            <ul class="footer-nav">
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Downloads</a></li>
+                                <li><a href="#">Partner</a></li>
+                                <li><a href="#">Interaktiver Liniennetzplan</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-sm-12">
+                        Copyright Verkehrsgesellschaft Ennepe-Ruhr mbH 2020
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="credit">Design by <strong>pechschwarz Media</strong></a>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/counterup.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

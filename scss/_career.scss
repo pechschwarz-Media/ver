@@ -179,3 +179,88 @@
         opacity: 0.4;
     }
 }
+
+/* Apply Form */
+
+.apply-form {
+    padding: $section-padding;
+    background: $light-grey;
+    @include media-breakpoint-down(sm) {
+        padding: $section-padding-small;
+    }
+    h2 {
+        color: theme-color("secondary");
+        margin-bottom: 20px;
+        margin-top: 40px;
+    }
+    label {
+        display: block;
+        input,
+        textarea {
+            display: block;
+            background: none;
+            border: solid 1px #ccc;
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            line-height: 1;
+            outline: none;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            &.check {
+                &:valid {
+                    border: solid 1px #376e37;
+                }
+                &:invalid {
+                    border: solid 1px #da1414;
+                }
+            }
+        }
+    }
+    .files {
+        .codedropz-upload-wrapper {
+            margin-bottom: 40px;
+        }
+    }
+    .privacy {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: flex-start;
+        input {
+            width: auto;
+            opacity: 0;
+            position: absolute;
+        }
+        input:checked + span:after {
+            content: "\e64c";
+            font-family: "themify";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: theme-color("secondary");
+            font-size: 13px;
+        }
+        span {
+            width: 20px;
+            height: 20px;
+            display: block;
+            border: solid 1px #ccc;
+            position: relative;
+            top: 1px;
+            margin-right: 10px;
+        }
+    }
+    .wpcf7-response-output {
+        background: #376e37;
+        padding: 15px !important;
+        color: #fff;
+        border: none !important;
+        margin: 0;
+    }
+    button {
+        border: none;
+        margin-top: 20px;
+    }
+}

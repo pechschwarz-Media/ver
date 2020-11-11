@@ -338,7 +338,7 @@ body {
     position: fixed;
     top: 50%;
     right: 0;
-    z-index: 999999;
+    z-index: 1000;
     a {
         display: block;
         height: 65px;
@@ -366,6 +366,64 @@ body {
         &.map {
             background: theme-color("primary");
             border-bottom-left-radius: 20px;
+        }
+    }
+}
+
+/* Sidebar Downloads */
+
+.sidebar-downloads {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 1000;
+    a {
+        display: flex;
+        position: relative;
+        background: theme-color("secondary");
+        color: $white;
+        font-weight: $font-weight-bold;
+        height: 55px;
+        line-height: 55px;
+        padding: 0 25px;
+        transform: translateX(100%);
+        transition: all 0.3s ease;
+        span {
+            position: absolute;
+            top: 0;
+            right: 100%;
+            height: 55px;
+            width: 55px;
+            background: theme-color("secondary");
+            border-right: solid 1px lighten(theme-color("secondary"), 5%);
+            i {
+                color: $white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 28px;
+                @include media-breakpoint-down(sm) {
+                    font-size: 24px;
+                }
+            }
+        }
+        &:hover {
+            transform: translateX(0);
+        }
+        &:nth-of-type(2) {
+            background: lighten(theme-color("secondary"), 5%);
+            span {
+                background: lighten(theme-color("secondary"), 5%);
+                border-right: solid 1px lighten(theme-color("secondary"), 10%);
+            }
+        }
+        &:nth-of-type(3) {
+            background: lighten(theme-color("secondary"), 10%);
+            span {
+                background: lighten(theme-color("secondary"), 10%);
+                border-right: solid 1px lighten(theme-color("secondary"), 15%);
+            }
         }
     }
 }
@@ -645,6 +703,31 @@ body {
                     a {
                         color: theme-color("secondary");
                     }
+                    ul {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        columns: 2;
+                        @include media-breakpoint-down(lg) {
+                            columns: 1;
+                        }
+                        li {
+                            position: relative;
+                            margin-bottom: 10px;
+                            padding-left: 25px;
+                            &:before {
+                                content: "\e64c";
+                                font-family: "themify";
+                                color: theme-color("secondary");
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
                     .content__block {
                         margin-bottom: 30px;
                         span {
@@ -789,14 +872,9 @@ body {
             padding: 30px;
             z-index: 20;
             color: $white;
-            p {
-                min-height: 120px;
-                @include media-breakpoint-down(lg) {
-                    min-height: 50px;
-                }
-                @include media-breakpoint-down(md) {
-                    min-height: 0;
-                }
+            max-width: 350px;
+            .button {
+                margin-top: 20px;
             }
         }
     }
@@ -839,6 +917,9 @@ body {
                 outline: none;
                 -webkit-appearance: none;
                 -moz-appearance: none;
+                position: relative;
+                z-index: 10;
+                background: none;
             }
             &:after {
                 content: "\e64b";

@@ -16,6 +16,9 @@
             font-weight: $font-weight-bold;
             padding: 15px 30px;
             font-size: 24px;
+            min-height: 105px;
+            display: flex;
+            align-items: center;
             @include media-breakpoint-down(sm) {
                 padding: 15px;
             }
@@ -263,7 +266,7 @@
         li {
             display: flex;
             align-items: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             @include media-breakpoint-down(sm) {
                 margin-bottom: 20px;
             }

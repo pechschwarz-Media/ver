@@ -1,3 +1,9 @@
+/* Apply Form */
+
+$('.apply-form input, .apply-form textarea').focusout(function() {
+    $(this).addClass("check");
+});
+
 /* Header */
 
 $(document).scroll(function() {

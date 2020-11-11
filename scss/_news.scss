@@ -18,6 +18,9 @@
                 min-width: 200px;
                 border: solid 1px $text-color;
                 outline: none;
+                position: relative;
+                z-index: 10;
+                background: none;
                 -webkit-appearance: none;
                 -moz-appearance: none;
             }
