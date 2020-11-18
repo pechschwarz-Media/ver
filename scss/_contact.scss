@@ -177,6 +177,9 @@
             border: solid 1px #ccc;
             -webkit-appearance: none;
             -moz-appearance: none;
+            position: relative;
+            z-index: 10;
+            background: transparent;
         }
         &:after {
             content: "\e64b";

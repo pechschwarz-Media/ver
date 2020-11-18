@@ -738,6 +738,9 @@ body {
                             margin-bottom: 0;
                         }
                     }
+                    p:last-of-type {
+                        margin-bottom: 0;
+                    }
                 }
             }
         }
@@ -912,7 +915,7 @@ body {
             display: inline-block;
             select {
                 padding: 10px;
-                min-width: 200px;
+                min-width: 300px;
                 border: solid 1px $text-color;
                 outline: none;
                 -webkit-appearance: none;
@@ -1043,5 +1046,85 @@ body {
     h3 {
         color: theme-color("secondary");
         margin-top: 30px;
+    }
+}
+
+/* Calendar */
+
+.calendar {
+    .calendar__title {
+        display: flex;
+        flex-flow: row wrap;
+        .title-date {
+            flex: 0 0 200px;
+            padding: 20px;
+            border: solid 1px theme-color("primary");
+            border-bottom: none;
+            border-top-left-radius: 10px;
+            background: theme-color("primary");
+            color: $white;
+            @include media-breakpoint-down(sm) {
+                flex: 1;
+                padding: 10px;
+            }
+        }
+        .title-desc {
+            flex: 1;
+            padding: 20px;
+            border: solid 1px theme-color("primary");
+            border-left: solid 1px $white;
+            border-bottom: none;
+            border-top-right-radius: 10px;
+            color: $white;
+            background: theme-color("primary");
+            font-weight: $font-weight-bold;
+            @include media-breakpoint-down(sm) {
+                padding: 10px;
+            }
+        }
+    }
+    .single__calendar {
+        display: flex;
+        flex-flow: row wrap;
+        .date {
+            flex: 0 0 200px;
+            background: theme-color("secondary");
+            border: solid 1px theme-color("secondary");
+            border-top: solid 1px $white;
+            border-bottom: none;
+            color: $white;
+            padding: 20px;
+            font-weight: $font-weight-bold;
+            @include media-breakpoint-down(sm) {
+                flex: 1;
+                padding: 10px;
+            }
+        }
+        .title {
+            flex: 1;
+            border: solid 1px theme-color("secondary");
+            border-bottom: none;
+            padding: 20px;
+            color: theme-color("secondary");
+            font-weight: $font-weight-bold;
+            @include media-breakpoint-down(sm) {
+                padding: 10px;
+            }
+        }
+        &.first {
+            .title {
+                border-top: solid 1px $white;
+            }
+        }
+        &.last {
+            .date {
+                border-bottom-left-radius: 10px;
+                border-bottom: solid 1px theme-color("secondary");
+            }
+            .title {
+                border-bottom-right-radius: 10px;
+                border-bottom: solid 1px theme-color("secondary");
+            }
+        }
     }
 }

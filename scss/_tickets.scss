@@ -329,6 +329,27 @@
             background: $white;
             .inner {
                 padding: 20px;
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        position: relative;
+                        margin-bottom: 10px;
+                        padding-left: 25px;
+                        &:before {
+                            content: "\e64c";
+                            font-family: "themify";
+                            color: theme-color("secondary");
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
             }
         }
         &:last-of-type {

@@ -20,7 +20,7 @@
             }
         }
         .content {
-            height: 300px;
+            height: 350px;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
@@ -33,6 +33,7 @@
                 padding: 30px;
                 color: $white;
                 z-index: 30;
+                max-width: 350px;
                 @include media-breakpoint-down(sm) {
                     padding: 15px;
                 }

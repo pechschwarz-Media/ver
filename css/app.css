@@ -10690,6 +10690,9 @@ body:before {
 .text-image .accordion .accordion__single .content .inner .content__block:last-of-type {
   margin-bottom: 0;
 }
+.text-image .accordion .accordion__single .content .inner p:last-of-type {
+  margin-bottom: 0;
+}
 .text-image table tr td {
   font-weight: 700;
 }
@@ -10871,7 +10874,7 @@ body:before {
 }
 .downloads .downloads__filter .select-container select {
   padding: 10px;
-  min-width: 200px;
+  min-width: 300px;
   border: solid 1px #737373;
   outline: none;
   -webkit-appearance: none;
@@ -11006,6 +11009,87 @@ body:before {
 .content-section h3 {
   color: #EE7100;
   margin-top: 30px;
+}
+
+/* Calendar */
+.calendar .calendar__title {
+  display: flex;
+  flex-flow: row wrap;
+}
+.calendar .calendar__title .title-date {
+  flex: 0 0 200px;
+  padding: 20px;
+  border: solid 1px #2284B5;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  background: #2284B5;
+  color: #fff;
+}
+@media (max-width: 767.98px) {
+  .calendar .calendar__title .title-date {
+    flex: 1;
+    padding: 10px;
+  }
+}
+.calendar .calendar__title .title-desc {
+  flex: 1;
+  padding: 20px;
+  border: solid 1px #2284B5;
+  border-left: solid 1px #fff;
+  border-bottom: none;
+  border-top-right-radius: 10px;
+  color: #fff;
+  background: #2284B5;
+  font-weight: 700;
+}
+@media (max-width: 767.98px) {
+  .calendar .calendar__title .title-desc {
+    padding: 10px;
+  }
+}
+.calendar .single__calendar {
+  display: flex;
+  flex-flow: row wrap;
+}
+.calendar .single__calendar .date {
+  flex: 0 0 200px;
+  background: #EE7100;
+  border: solid 1px #EE7100;
+  border-top: solid 1px #fff;
+  border-bottom: none;
+  color: #fff;
+  padding: 20px;
+  font-weight: 700;
+}
+@media (max-width: 767.98px) {
+  .calendar .single__calendar .date {
+    flex: 1;
+    padding: 10px;
+  }
+}
+.calendar .single__calendar .title {
+  flex: 1;
+  border: solid 1px #EE7100;
+  border-bottom: none;
+  padding: 20px;
+  color: #EE7100;
+  font-weight: 700;
+}
+@media (max-width: 767.98px) {
+  .calendar .single__calendar .title {
+    padding: 10px;
+  }
+}
+.calendar .single__calendar.first .title {
+  border-top: solid 1px #fff;
+}
+.calendar .single__calendar.last .date {
+  border-bottom-left-radius: 10px;
+  border-bottom: solid 1px #EE7100;
+}
+.calendar .single__calendar.last .title {
+  border-bottom-right-radius: 10px;
+  border-bottom: solid 1px #EE7100;
 }
 
 /* Grid */
@@ -12535,6 +12619,16 @@ footer .sub-footer .credit strong {
 }
 
 /* Yearplan */
+.yearplan {
+  padding: 140px 0;
+  padding-bottom: 0;
+}
+@media (max-width: 767.98px) {
+  .yearplan {
+    padding: 80px 0;
+    padding-bottom: 0;
+  }
+}
 .yearplan iframe {
   width: 100%;
   height: 800px;
@@ -13098,6 +13192,27 @@ footer .sub-footer .credit strong {
 .ticket-accordion .accordion .content .inner {
   padding: 20px;
 }
+.ticket-accordion .accordion .content .inner ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ticket-accordion .accordion .content .inner ul li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 25px;
+}
+.ticket-accordion .accordion .content .inner ul li:before {
+  content: "";
+  font-family: "themify";
+  color: #EE7100;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ticket-accordion .accordion .content .inner ul li:last-child {
+  margin-bottom: 0;
+}
 .ticket-accordion .accordion:last-of-type {
   margin-bottom: 60px;
 }
@@ -13577,6 +13692,9 @@ footer .sub-footer .credit strong {
   border: solid 1px #ccc;
   -webkit-appearance: none;
   -moz-appearance: none;
+  position: relative;
+  z-index: 10;
+  background: transparent;
 }
 .contact-map .select-container:after {
   content: "";
@@ -13680,7 +13798,7 @@ footer .sub-footer .credit strong {
   }
 }
 .job-overview .job-overview__single .content {
-  height: 300px;
+  height: 350px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -13694,6 +13812,7 @@ footer .sub-footer .credit strong {
   padding: 30px;
   color: #fff;
   z-index: 30;
+  max-width: 350px;
 }
 @media (max-width: 767.98px) {
   .job-overview .job-overview__single .content .text {
@@ -14051,6 +14170,9 @@ footer .sub-footer .credit strong {
   outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  position: relative;
+  z-index: 10;
+  background: transparent;
 }
 .customer-center .select-container:after {
   content: "";
