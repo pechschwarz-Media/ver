@@ -1,0 +1,345 @@
+/* Connection Check */
+
+.connection-check {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    background: $light-grey;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+    .connection-check__toggle {
+        background: theme-color("primary");
+        position: absolute;
+        left: 50%;
+        bottom: 100%;
+        transform: translateX(-50%);
+        padding: 20px 80px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: all 0.5s ease;
+        @include media-breakpoint-down(lg) {
+            padding: 15px 60px;
+        }
+        @include media-breakpoint-down(md) {
+            padding: 15px 40px;
+        }
+        span {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: theme-color("primary");
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -40px;
+            @include media-breakpoint-down(lg) {
+                width: 70px;
+                height: 70px;
+                top: -35px;
+            }
+            @include media-breakpoint-down(sm) {
+                width: 60px;
+                height: 60px;
+                top: -30px;
+            }
+            i {
+                color: $white;
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 32px;
+                @include media-breakpoint-down(lg) {
+                    font-size: 24px;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 20px;
+                }
+            }
+        }
+        .text {
+            color: $white;
+            font-weight: $font-weight-bold;
+            font-size: $font-size-md;
+            position: relative;
+            @include media-breakpoint-down(md) {
+                font-size: $font-size-base;
+            }
+            i {
+                position: relative;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+                display: inline-block;
+            }
+        }
+    }
+    .connection-check__inner {
+        padding: 30px 0;
+        font-size: 1rem;
+        form {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        .form-container {
+            flex-shrink: 1;
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row wrap;
+            @media screen and (max-width:1700px) {
+                flex: 0 0 100%;
+            }
+        }
+        .input-start-city {
+            position: relative;
+            @media screen and (max-width:1530px) {
+                flex: 0 0 25%;
+            }
+            @include media-breakpoint-down(sm) {
+                flex: 0 0 50%;
+            }
+            input {
+                background: $white;
+                border: solid 1px $text-color;
+                height: auto;
+                padding: 5px 5px 5px 35px;
+                outline: none;
+                max-width: 200px;
+                @media screen and (max-width:1530px) {
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+            i {
+                color: theme-color("secondary");
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10px;
+            }
+        }
+        .input-start-point {
+            position: relative;
+            @media screen and (max-width:1530px) {
+                flex: 0 0 25%;
+            }
+            @include media-breakpoint-down(sm) {
+                flex: 0 0 50%;
+            }
+            select {
+                position: absolute;
+                bottom: 100%;
+                color: theme-color("secondary");
+                background: none;
+                border: none;
+                outline: none;
+                font-size: 12px;
+                margin-bottom: 2px;
+                margin-left: 15px;
+            }
+            input {
+                background: $white;
+                border: solid 1px $text-color;
+                height: auto;
+                padding: 5px 5px 5px 20px;
+                outline: none;
+                border-left: none;
+                max-width: 200px;
+                @media screen and (max-width:1530px) {
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+            span {
+                width: 24px;
+                height: 24px;
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                margin-right: -12px;
+                transform: translateY(-50%);
+                display: block;
+                border-radius: 50%;
+                border: solid 1px $text-color;
+                background: $white;
+                cursor: pointer;
+                z-index: 10;
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
+                i {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+        .input-end-city {
+            position: relative;
+            @media screen and (max-width:1530px) {
+                flex: 0 0 25%;
+            }
+            @include media-breakpoint-down(sm) {
+                flex: 0 0 50%;
+                margin-top: 30px;
+            }
+            input {
+                background: $white;
+                border: solid 1px $text-color;
+                height: auto;
+                padding: 5px 5px 5px 45px;
+                outline: none;
+                border-left: none;
+                max-width: 200px;
+                @media screen and (max-width:1530px) {
+                    max-width: 100%;
+                    width: 100%;
+                }
+                @include media-breakpoint-down(sm) {
+                    border-left: solid 1px $text-color;
+                    padding-left: 35px;
+                }
+            }
+            i {
+                color: theme-color("secondary");
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 20px;
+                @include media-breakpoint-down(sm) {
+                    left: 10px;
+                }
+            }
+        }
+        .input-end-point {
+            position: relative;
+            @media screen and (max-width:1530px) {
+                flex: 0 0 25%;
+            }
+            @include media-breakpoint-down(sm) {
+                flex: 0 0 50%;
+                margin-top: 30px;
+            }
+            select {
+                position: absolute;
+                bottom: 100%;
+                color: theme-color("secondary");
+                background: none;
+                border: none;
+                outline: none;
+                font-size: 12px;
+                margin-bottom: 2px;
+                margin-left: 15px;
+            }
+            input {
+                background: $white;
+                border: solid 1px $text-color;
+                height: auto;
+                padding: 5px 5px 5px 20px;
+                outline: none;
+                border-left: none;
+                max-width: 200px;
+                @media screen and (max-width:1530px) {
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        .input-date {
+            position: relative;
+            margin-left: 20px;
+            @media screen and (max-width:1700px) {
+                flex: 1;
+            }
+            @media screen and (max-width:1530px) {
+                flex: 0 0 49%;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            input {
+                background: $white;
+                border: solid 1px $text-color;
+                height: auto;
+                padding: 5px 5px 5px 40px;
+                outline: none;
+                width: 140px;
+                @media screen and (max-width:1700px) {
+                    width: 100%;
+                }
+            }
+            i {
+                color: theme-color("secondary");
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 15px;
+                cursor: pointer;
+            }
+        }
+        .input-time {
+            position: relative;
+            margin-left: 20px;
+            @media screen and (max-width:1700px) {
+                flex: 1;
+            }
+            @media screen and (max-width:1530px) {
+                flex: 0 0 49%;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            input {
+                background: $white;
+                border: solid 1px $text-color;
+                height: auto;
+                padding: 5px 5px 5px 40px;
+                outline: none;
+                width: 110px;
+                line-height: 1.4;
+                @media screen and (max-width:1700px) {
+                    width: 100%;
+                }
+            }
+            input[type="time"]::-webkit-calendar-picker-indicator {
+                display: none;
+                -webkit-appearance: none;
+                background: none;
+            }
+            i {
+                color: theme-color("secondary");
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 15px;
+            }
+        }
+        button {
+            border: none;
+            padding: 5px 15px;
+            @media screen and (max-width:1700px) {
+                margin-top: 10px;
+            }
+        }
+    }
+    &.show {
+        transform: translateY(0);
+        .connection-check__toggle {
+            .text {
+                i {
+                    transform: rotateZ(180deg);
+                }
+            }
+        }
+    }
+    &.moved {
+        .connection-check__toggle {
+            transform: translateX(-50%) translateY(200%);
+        }
+    }
+}

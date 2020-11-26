@@ -55,277 +55,6 @@ body {
     }
 }
 
-/* Connection Check */
-
-.connection-check {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 99999;
-    width: 100%;
-    background: $light-grey;
-    transform: translateY(100%);
-    transition: all 0.3s ease;
-    .connection-check__toggle {
-        background: theme-color("primary");
-        position: absolute;
-        left: 50%;
-        bottom: 100%;
-        transform: translateX(-50%);
-        padding: 20px 80px;
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
-        cursor: pointer;
-        white-space: nowrap;
-        transition: all 0.5s ease;
-        @include media-breakpoint-down(lg) {
-            padding: 15px 60px;
-        }
-        @include media-breakpoint-down(md) {
-            padding: 15px 40px;
-        }
-        span {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: theme-color("primary");
-            display: block;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            top: -40px;
-            @include media-breakpoint-down(lg) {
-                width: 70px;
-                height: 70px;
-                top: -35px;
-            }
-            @include media-breakpoint-down(sm) {
-                width: 60px;
-                height: 60px;
-                top: -30px;
-            }
-            i {
-                color: $white;
-                position: absolute;
-                top: 45%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                font-size: 32px;
-                @include media-breakpoint-down(lg) {
-                    font-size: 24px;
-                }
-                @include media-breakpoint-down(sm) {
-                    font-size: 20px;
-                }
-            }
-        }
-        .text {
-            color: $white;
-            font-weight: $font-weight-bold;
-            font-size: $font-size-md;
-            position: relative;
-            @include media-breakpoint-down(md) {
-                font-size: $font-size-base;
-            }
-            i {
-                position: relative;
-                font-size: 1rem;
-                transition: all 0.3s ease;
-                display: inline-block;
-            }
-        }
-    }
-    .connection-check__inner {
-        padding: 30px 0;
-        font-size: 1rem;
-        form {
-            display: flex;
-            justify-content: space-between;
-        }
-        .form-container {
-            flex-shrink: 1;
-            display: flex;
-        }
-        .input-start-city {
-            position: relative;
-            input {
-                background: $white;
-                border: solid 1px $text-color;
-                height: auto;
-                padding: 5px 20px 5px 35px;
-                outline: none;
-                max-width: 200px;
-            }
-            i {
-                color: theme-color("secondary");
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                left: 10px;
-            }
-        }
-        .input-start-point {
-            position: relative;
-            input {
-                background: $white;
-                border: solid 1px $text-color;
-                height: auto;
-                padding: 5px 5px 5px 20px;
-                outline: none;
-                border-left: none;
-                max-width: 200px;
-            }
-            span {
-                width: 24px;
-                height: 24px;
-                display: block;
-                position: absolute;
-                top: 50%;
-                right: 0;
-                margin-right: -12px;
-                transform: translateY(-50%);
-                display: block;
-                border-radius: 50%;
-                border: solid 1px $text-color;
-                background: $white;
-                cursor: pointer;
-                z-index: 10;
-                i {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                }
-            }
-        }
-        .input-end-city {
-            position: relative;
-            input {
-                background: $white;
-                border: solid 1px $text-color;
-                height: auto;
-                padding: 5px 20px 5px 45px;
-                outline: none;
-                border-left: none;
-                max-width: 200px;
-            }
-            i {
-                color: theme-color("secondary");
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                left: 20px;
-            }
-        }
-        .input-end-point {
-            input {
-                background: $white;
-                border: solid 1px $text-color;
-                height: auto;
-                padding: 5px 5px 5px 20px;
-                outline: none;
-                border-left: none;
-                max-width: 200px;
-            }
-        }
-        .input-date {
-            border: solid 1px $text-color;
-            display: flex;
-            margin-left: 20px;
-            .left,
-            .right {
-                position: relative;
-                height: 100%;
-                width: 20px;
-                cursor: pointer;
-                i {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    color: theme-color("secondary");
-                    font-size: 14px;
-                }
-            }
-            input {
-                border: none;
-                background: $white;
-                height: auto;
-                padding: 5px 10px;
-                outline: none;
-                width: 100px;
-            }
-        }
-        .date-toggle {
-            border: solid 1px $text-color;
-            height: 36px;
-            width: 36px;
-            position: relative;
-            cursor: pointer;
-            margin-left: 20px;
-            i {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-        }
-        .input-time {
-            border: solid 1px $text-color;
-            display: flex;
-            margin-left: 20px;
-            .left,
-            .right {
-                position: relative;
-                height: 100%;
-                width: 20px;
-                cursor: pointer;
-                i {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    color: theme-color("secondary");
-                    font-size: 14px;
-                }
-            }
-            input {
-                border: none;
-                background: $white;
-                height: auto;
-                padding: 5px 10px;
-                outline: none;
-                line-height: 1.4;
-                width: 65px;
-            }
-            input[type="time"]::-webkit-calendar-picker-indicator {
-                display: none;
-                -webkit-appearance: none;
-                background: none;
-            }
-        }
-        button {
-            border: none;
-            padding: 5px 15px;
-        }
-    }
-    &.show {
-        transform: translateY(0);
-        .connection-check__toggle {
-            .text {
-                i {
-                    transform: rotateZ(180deg);
-                }
-            }
-        }
-    }
-    &.moved {
-        .connection-check__toggle {
-            transform: translateX(-50%) translateY(200%);
-        }
-    }
-}
-
 /* Datepicker */
 
 .datepicker-panel > ul > li.picked, .datepicker-panel > ul > li.picked:hover {
@@ -340,32 +69,57 @@ body {
     right: 0;
     z-index: 1000;
     a {
-        display: block;
-        height: 65px;
-        width: 65px;
+        display: flex;
+        align-items: center;
         position: relative;
+        height: 65px;
+        padding: 0 30px;
+        color: $white;
+        transform: translateX(100%);
+        transition: all 0.3s ease;
         @include media-breakpoint-down(sm) {
             height: 55px;
-            width: 55px;
         }
-        i {
-            color: $white;
+        span {
+            height: 65px;
+            width: 65px;
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 28px;
+            right: 100%;
+            top: 0;
             @include media-breakpoint-down(sm) {
-                font-size: 24px;
+                height: 55px;
+                width: 55px;
+            }
+            i {
+                color: $white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 28px;
+                @include media-breakpoint-down(sm) {
+                    font-size: 24px;
+                }
             }
         }
         &.download {
             background: theme-color("secondary");
-            border-top-left-radius: 20px;
+            span {
+                background: theme-color("secondary");
+                border-top-left-radius: 20px;
+                border-right: solid 1px #d66500;
+            }
         }
         &.map {
             background: theme-color("primary");
-            border-bottom-left-radius: 20px;
+            span {
+                background: theme-color("primary");
+                border-bottom-left-radius: 20px;
+                border-right: solid 1px #1e76a2;
+            }
+        }
+        &:hover {
+            transform: translateX(0);
         }
     }
 }
@@ -738,9 +492,6 @@ body {
                             margin-bottom: 0;
                         }
                     }
-                    p:last-of-type {
-                        margin-bottom: 0;
-                    }
                 }
             }
         }
@@ -1056,12 +807,12 @@ body {
         display: flex;
         flex-flow: row wrap;
         .title-date {
-            flex: 0 0 200px;
+            flex: 0 0 300px;
             padding: 20px;
-            border: solid 1px theme-color("primary");
+            border: solid 1px theme-color("secondary");
             border-bottom: none;
             border-top-left-radius: 10px;
-            background: theme-color("primary");
+            background: theme-color("secondary");
             color: $white;
             @include media-breakpoint-down(sm) {
                 flex: 1;
@@ -1071,12 +822,12 @@ body {
         .title-desc {
             flex: 1;
             padding: 20px;
-            border: solid 1px theme-color("primary");
+            border: solid 1px theme-color("secondary");
             border-left: solid 1px $white;
             border-bottom: none;
             border-top-right-radius: 10px;
             color: $white;
-            background: theme-color("primary");
+            background: theme-color("secondary");
             font-weight: $font-weight-bold;
             @include media-breakpoint-down(sm) {
                 padding: 10px;
@@ -1087,12 +838,12 @@ body {
         display: flex;
         flex-flow: row wrap;
         .date {
-            flex: 0 0 200px;
-            background: theme-color("secondary");
-            border: solid 1px theme-color("secondary");
+            flex: 0 0 300px;
+            background: #d6d6d6;
+            border: solid 1px #d6d6d6;
             border-top: solid 1px $white;
             border-bottom: none;
-            color: $white;
+            color: $text-color;
             padding: 20px;
             font-weight: $font-weight-bold;
             @include media-breakpoint-down(sm) {
@@ -1102,7 +853,8 @@ body {
         }
         .title {
             flex: 1;
-            border: solid 1px theme-color("secondary");
+            border: solid 1px #d6d6d6;
+            border-left: solid 1px $white;
             border-bottom: none;
             padding: 20px;
             color: theme-color("secondary");
@@ -1119,11 +871,11 @@ body {
         &.last {
             .date {
                 border-bottom-left-radius: 10px;
-                border-bottom: solid 1px theme-color("secondary");
+                border-bottom: solid 1px #d6d6d6;
             }
             .title {
                 border-bottom-right-radius: 10px;
-                border-bottom: solid 1px theme-color("secondary");
+                border-bottom: solid 1px #d6d6d6;
             }
         }
     }

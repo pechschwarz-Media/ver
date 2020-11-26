@@ -6,6 +6,10 @@
     position: relative;
     display: flex;
     align-items: center;
+    @include media-breakpoint-down(sm) {
+        align-items: flex-end;
+        padding-bottom: 100px;
+    }
     .app-header__background {
         position: absolute;
         top: 0;

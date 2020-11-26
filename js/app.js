@@ -62,7 +62,7 @@ $(document).ready(function() {
         autoHide: true,
         zIndex: 99999999999,
         offset: 10,
-        trigger: $('.connection-check .connection-check__inner .date-toggle'),
+        trigger: $('.connection-check .connection-check__inner .input-date i'),
         placement: "bottom-right",
         language: "de-DE",
         format: "dd.mm.yyyy",
@@ -74,18 +74,6 @@ $(document).ready(function() {
     });
 });
 
-$('.connection-check .connection-check__inner .input-date .left').click(function() {
-    var date = $('.connection-check .connection-check__inner .input-date input').datepicker('getDate');
-    date.setDate(date.getDate() - 1);
-    $('.connection-check .connection-check__inner .input-date input').datepicker('setDate', date);
-});
-
-$('.connection-check .connection-check__inner .input-date .right').click(function() {
-    var date = $('.connection-check .connection-check__inner .input-date input').datepicker('getDate');
-    date.setDate(date.getDate() + 1);
-    $('.connection-check .connection-check__inner .input-date input').datepicker('setDate', date);
-});
-
 function getCurrentTime(date) {
         var h = (date.getHours().toString().length == 1) ? "0" + date.getHours() : date.getHours();
             m = (date.getMinutes().toString().length == 1) ? "0" + date.getMinutes() : date.getMinutes()
@@ -94,49 +82,21 @@ function getCurrentTime(date) {
     $('.connection-check .connection-check__inner .input-time input').val(time);
 }
 
-function decTime() {
-    var time = $('.connection-check .connection-check__inner .input-time input').val(),
-        date = new Date('1995-06-21T' + time);
-
-    if(date.getMinutes() == 00) {
-        var h = ((date.getHours() - 1).toString().length == 1) ? "0" + (date.getHours() - 1) : date.getHours() - 1,
-            m = "59";
-    } else {
-        var h = (date.getHours().toString().length == 1) ? "0" + date.getHours() : date.getHours(),
-            m = ((date.getMinutes() - 1).toString().length == 1) ? "0" + (date.getMinutes() - 1) : date.getMinutes() - 1;
-    }
-
-    var date = new Date('1995-06-21T' + h + ":" + m);
-    getCurrentTime(date);
-}
-
-function incTime() {
-    var time = $('.connection-check .connection-check__inner .input-time input').val(),
-        date = new Date('1995-06-21T' + time);
-
-    if(date.getMinutes() == 59) {
-        var h = ((date.getHours() + 1).toString().length == 1) ? "0" + (date.getHours() + 1) : date.getHours() + 1,
-            m = "00";
-    } else {
-        var h = (date.getHours().toString().length == 1) ? "0" + date.getHours() : date.getHours(),
-            m = ((date.getMinutes() + 1).toString().length == 1) ? "0" + (date.getMinutes() + 1) : date.getMinutes() + 1;
-    }
-
-    var date = new Date('1995-06-21T' + h + ":" + m);
-    getCurrentTime(date);
-}
-
 $(document).ready(function() {
     var date = new Date();
     getCurrentTime(date);
 });
 
-$('.connection-check .connection-check__inner .input-time .right').click(function() {
-    incTime();
-});
+$('.connection-check .connection-check__inner .input-start-point span').click(function() {
+    var start_city = $('.input-start-city input').val(),
+        start_point = $('.input-start-point input').val(),
+        end_city = $('.input-end-city input').val(),
+        end_point = $('.input-end-point input').val();
 
-$('.connection-check .connection-check__inner .input-time .left').click(function() {
-    decTime();
+    $('.input-start-city input').val(end_city);
+    $('.input-start-point input').val(end_point);
+    $('.input-end-city input').val(start_city);
+    $('.input-end-point input').val(start_point);
 });
 
 /* Search Overlay */
@@ -349,7 +309,7 @@ $(document).ready(function(){
 
 /* History */
 
-$(document).ready(function() {
+/*$(document).ready(function() {
     $('.history svg .point').each(function() {
         var point = $(this),
             pos = point.position(),
@@ -402,4 +362,26 @@ $('.history svg .point').click(function() {
 
 $('.history .history__content .close').click(function() {
     $(this).parent().removeClass('visible');
+});*/
+
+var controller = new ScrollMagic.Controller();
+var historyHeight = $('.history .history__timeline').outerHeight();
+
+var historyLine = new ScrollMagic.Scene({
+    triggerElement: ".history",
+    duration: historyHeight + "px",
+    triggerHook: 0.5
+})
+.setTween('.history .history__timeline .line', {'height': '100%', ease: Linear.easeNone})
+.addTo(controller);
+
+$('.history .history__timeline .timeline-item').each(function() {
+    var element = this;
+    new ScrollMagic.Scene({
+        triggerElement: element,
+        triggerHook: 0.5
+    })
+    .setClassToggle(element, "visible")
+    .reverse(false)
+    .addTo(controller)
 });

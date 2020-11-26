@@ -149,14 +149,20 @@ header {
                 }
                 span {
                     position: absolute;
-                    right: 15px;
-                    top: 14px;
+                    height: 50px;
+                    right: 0;
+                    top: 0;
                     font-size: 16px;
+                    width: 50px;
                     color: $white;
                     cursor: pointer;
                     transition: all 0.3s ease;
-                    @include media-breakpoint-only(md) {
-                        top: 16px;
+                    z-index: 100;
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
                     }
                     &.open {
                         transform: rotateZ(90deg);
@@ -190,6 +196,7 @@ header {
                             }
                             a {
                                 color: $body-color;
+                                background: $white !important;
                                 font-size: 1rem;
                                 padding: 6px;
                                 line-height: 1;
@@ -310,6 +317,11 @@ header {
                         color: $text-color;
                         @include media-breakpoint-down(md) {
                             color: $white;
+                        }
+                    }
+                    &:hover {
+                        a {
+                            color: theme-color("secondary");
                         }
                     }
                     &.current-menu-item,
