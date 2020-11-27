@@ -1,0 +1,57 @@
+/* Login */
+
+.login {
+    width: 100vw;
+    height: 100vh;
+    background: theme-color("secondary");
+    position: relative;
+    z-index: 1000;
+    .login__box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+        text-align: center;
+        width: 95%;
+        max-width: 500px;
+        h2 {
+            margin-bottom: 10px;
+            color: theme-color("secondary");
+        }
+        form {
+            margin-top: 50px;
+            .input-container {
+                position: relative;
+                margin-bottom: 30px;
+                i {
+                    position: absolute;
+                    right: 0;
+                    color: $text-color;
+                    bottom: 11px;
+                }
+                input {
+                    width: 100%;
+                    display: block;
+                    font-size: 1rem;
+                    outline: none;
+                    border: none;
+                    border-bottom: solid 1px $text-color;
+                    padding: 0 0 6px 0;
+                }
+            }
+            button {
+                display: inline-block;
+                padding: 10px 25px;
+                background: theme-color("secondary");
+                color: $white;
+                border-radius: 10px;
+                border: none;
+                margin-top: 10px;
+            }
+        }
+    }
+}

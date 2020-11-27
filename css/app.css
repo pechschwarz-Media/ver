@@ -14760,4 +14760,61 @@ footer .sub-footer .credit strong {
   }
 }
 
+/* Login */
+.login {
+  width: 100vw;
+  height: 100vh;
+  background: #EE7100;
+  position: relative;
+  z-index: 1000;
+}
+.login .login__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 95%;
+  max-width: 500px;
+}
+.login .login__box h2 {
+  margin-bottom: 10px;
+  color: #EE7100;
+}
+.login .login__box form {
+  margin-top: 50px;
+}
+.login .login__box form .input-container {
+  position: relative;
+  margin-bottom: 30px;
+}
+.login .login__box form .input-container i {
+  position: absolute;
+  right: 0;
+  color: #737373;
+  bottom: 11px;
+}
+.login .login__box form .input-container input {
+  width: 100%;
+  display: block;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: solid 1px #737373;
+  padding: 0 0 6px 0;
+}
+.login .login__box form button {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #EE7100;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+}
+
 /*# sourceMappingURL=app.css.map */
