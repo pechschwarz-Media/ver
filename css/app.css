@@ -10509,6 +10509,9 @@ body:before {
     padding-bottom: 20px;
   }
 }
+.header.no-zoom .header__background {
+  animation-name: unset;
+}
 
 /* Page Overview */
 .page-overview {

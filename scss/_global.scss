@@ -569,6 +569,11 @@ body {
             padding-bottom: 20px;
         }
     }
+    &.no-zoom {
+        .header__background {
+            animation-name: unset;
+        }
+    }
 }
 
 /* Page Overview */
