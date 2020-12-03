@@ -105,6 +105,12 @@
             }
         }
     }
+    &.grey-bg {
+        background: $light-grey;
+        h2 {
+            color: theme-color("secondary");
+        }
+    }
     &.dark-grey-bg {
         background: $dark-grey;
         h2 {

@@ -98,6 +98,9 @@
     @include media-breakpoint-down(sm) {
         padding: $section-padding-small;
     }
+    h2 {
+        color: theme-color("secondary");
+    }
     .home-news__single {
         margin-bottom: 30px;
         border: solid 1px #ccc;
@@ -169,6 +172,9 @@
     position: relative;
     @include media-breakpoint-down(sm) {
         padding: $section-padding-small;
+    }
+    h2 {
+        color: theme-color("secondary");
     }
     .home-services__overview {
         display: flex;
@@ -261,6 +267,9 @@
         @include media-breakpoint-down(md) {
             padding-bottom: 40px;
         }
+        h2 {
+            color: theme-color("secondary");
+        }
         &:before {
             content: "";
             position: absolute;
@@ -351,6 +360,9 @@
     padding: $section-padding;
     @include media-breakpoint-down(sm) {
         padding: $section-padding-small;
+    }
+    h2 {
+        color: theme-color("secondary");
     }
     .button {
         margin-top: 30px;
