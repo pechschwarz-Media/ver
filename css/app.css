@@ -10156,6 +10156,7 @@ body:before {
   color: #EE7100;
   border: none;
   transition: all 0.3s ease;
+  outline: none;
 }
 .search-overlay form button:hover {
   background: #2284B5;
@@ -10232,6 +10233,16 @@ body:before {
 .text-image h2,
 .text-image h3 {
   color: #EE7100;
+}
+@media (max-width: 767.98px) {
+  .text-image table tr td {
+    display: block;
+  }
+}
+@media (max-width: 767.98px) {
+  .text-image table tr td:last-child {
+    padding-bottom: 10px;
+  }
 }
 .text-image .headline {
   display: flex;
@@ -10406,6 +10417,7 @@ body:before {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 16px;
   columns: 2;
 }
 @media (max-width: 1439.98px) {
@@ -10727,6 +10739,11 @@ body:before {
   padding: 0;
   margin: 0;
   text-align: center;
+}
+@media (max-width: 767.98px) {
+  .row-jumper ul {
+    text-align: left;
+  }
 }
 .row-jumper ul li {
   display: inline-block;
@@ -11297,6 +11314,12 @@ h4 {
     width: 100%;
   }
 }
+.connection-check .connection-check__inner .input-time input[type=time] {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
 .connection-check .connection-check__inner .input-time input[type=time]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
@@ -11324,8 +11347,8 @@ h4 {
 .connection-check.show .connection-check__toggle .text i {
   transform: rotateZ(180deg);
 }
-.connection-check.moved .connection-check__toggle {
-  transform: translateX(-50%) translateY(200%);
+.connection-check.moved {
+  transform: translateY(100%) !important;
 }
 
 /* Header (Background) */
@@ -11633,16 +11656,16 @@ header .main-nav ul li:hover a {
     color: #fff;
   }
 }
-header .main-nav ul li.current_page_parent a, header .main-nav ul li.current-menu-item a, header .main-nav ul li.current_page_item a {
+header .main-nav ul li.current_page_parent a, header .main-nav ul li.current-menu-item a, header .main-nav ul li.current_page_item a, header .main-nav ul li.current-page-ancestor a {
   color: #EE7100;
 }
 @media (max-width: 1099.98px) {
-  header .main-nav ul li.current_page_parent a, header .main-nav ul li.current-menu-item a, header .main-nav ul li.current_page_item a {
+  header .main-nav ul li.current_page_parent a, header .main-nav ul li.current-menu-item a, header .main-nav ul li.current_page_item a, header .main-nav ul li.current-page-ancestor a {
     background: #d66500;
     color: #fff;
   }
 }
-header .main-nav ul li.current_page_parent:before, header .main-nav ul li.current-menu-item:before, header .main-nav ul li.current_page_item:before {
+header .main-nav ul li.current_page_parent:before, header .main-nav ul li.current-menu-item:before, header .main-nav ul li.current_page_item:before, header .main-nav ul li.current-page-ancestor:before {
   content: "";
   width: 2px;
   height: 25px;
@@ -11654,7 +11677,7 @@ header .main-nav ul li.current_page_parent:before, header .main-nav ul li.curren
   transform: translateY(-50%);
 }
 @media (max-width: 1099.98px) {
-  header .main-nav ul li.current_page_parent:before, header .main-nav ul li.current-menu-item:before, header .main-nav ul li.current_page_item:before {
+  header .main-nav ul li.current_page_parent:before, header .main-nav ul li.current-menu-item:before, header .main-nav ul li.current_page_item:before, header .main-nav ul li.current-page-ancestor:before {
     display: none;
   }
 }
@@ -11694,11 +11717,11 @@ header.scroll .main-nav ul li a {
 header.scroll .main-nav ul li:hover a {
   color: #EE7100;
 }
-header.scroll .main-nav ul li.current-menu-item a, header.scroll .main-nav ul li.current_page_item a {
+header.scroll .main-nav ul li.current_page_parent a, header.scroll .main-nav ul li.current-menu-item a, header.scroll .main-nav ul li.current_page_item a, header.scroll .main-nav ul li.current-page-ancestor a {
   color: #EE7100;
 }
 @media (max-width: 1099.98px) {
-  header.scroll .main-nav ul li.current-menu-item a, header.scroll .main-nav ul li.current_page_item a {
+  header.scroll .main-nav ul li.current_page_parent a, header.scroll .main-nav ul li.current-menu-item a, header.scroll .main-nav ul li.current_page_item a, header.scroll .main-nav ul li.current-page-ancestor a {
     color: #fff;
   }
 }
@@ -12677,12 +12700,15 @@ footer .sub-footer .credit strong {
 .news-overview .news-overview__slider .slide .news .text {
   background: #fff;
   padding: 20px;
-  min-height: 300px;
+  min-height: 320px;
 }
 @media (max-width: 767.98px) {
   .news-overview .news-overview__slider .slide .news .text {
     min-height: 0;
   }
+}
+.news-overview .news-overview__slider .slide .news .text h3 {
+  min-height: 66px;
 }
 .news-overview .news-overview__slider .slide .news .text .button {
   margin-top: 20px;
@@ -12776,11 +12802,26 @@ footer .sub-footer .credit strong {
   display: flex;
   align-items: center;
   cursor: pointer;
+  position: relative;
+}
+@media (max-width: 767.98px) {
+  .traffic-overview .traffic-overview__single .title {
+    display: block;
+    padding-left: 50px;
+  }
 }
 .traffic-overview .traffic-overview__single .title i {
   color: #EE7100;
   font-size: 24px;
   margin-right: 15px;
+}
+@media (max-width: 767.98px) {
+  .traffic-overview .traffic-overview__single .title i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+  }
 }
 .traffic-overview .traffic-overview__single .title .lines {
   margin-left: auto;
@@ -13494,8 +13535,10 @@ footer .sub-footer .credit strong {
 }
 @media (max-width: 767.98px) {
   .app-header {
-    align-items: flex-end;
+    padding-top: 120px;
+    align-items: flex-start;
     padding-bottom: 100px;
+    text-align: right;
   }
 }
 .app-header .app-header__background {
@@ -13515,6 +13558,11 @@ footer .sub-footer .credit strong {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+}
+@media (max-width: 767.98px) {
+  .app-header .app-header__content .app-headline {
+    display: block;
+  }
 }
 .app-header .app-header__content .app-headline .image {
   text-align: center;
@@ -14294,6 +14342,9 @@ footer .sub-footer .credit strong {
   position: relative;
   top: 1px;
   margin-right: 10px;
+}
+.apply-form .privacy .caption {
+  flex: 1;
 }
 .apply-form .wpcf7-response-output {
   background: #376e37;

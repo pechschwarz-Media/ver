@@ -56,9 +56,12 @@
                 .text {
                     background: $white;
                     padding: 20px;
-                    min-height: 300px;
+                    min-height: 320px;
                     @include media-breakpoint-down(sm) {
                         min-height: 0;
+                    }
+                    h3 {
+                        min-height: 66px;
                     }
                     .button {
                         margin-top: 20px;

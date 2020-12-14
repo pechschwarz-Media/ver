@@ -306,6 +306,12 @@
                     width: 100%;
                 }
             }
+            input[type="time"] {
+                -webkit-user-select: text;
+                -moz-user-select: text;
+                -ms-user-select: text;
+                user-select: text;
+            }
             input[type="time"]::-webkit-calendar-picker-indicator {
                 display: none;
                 -webkit-appearance: none;
@@ -338,8 +344,6 @@
         }
     }
     &.moved {
-        .connection-check__toggle {
-            transform: translateX(-50%) translateY(200%);
-        }
+        transform: translateY(100%) !important;
     }
 }

@@ -19,10 +19,21 @@
             display: flex;
             align-items: center;
             cursor: pointer;
+            position: relative;
+            @include media-breakpoint-down(sm) {
+                display: block;
+                padding-left: 50px;
+            }
             i {
                 color: theme-color("secondary");
                 font-size: 24px;
                 margin-right: 15px;
+                @include media-breakpoint-down(sm) {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 15px;
+                }
             }
             .lines {
                 margin-left: auto;

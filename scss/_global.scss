@@ -246,6 +246,7 @@ body {
             color: theme-color("secondary");
             border: none;
             transition: all 0.3s ease;
+            outline: none;
             &:hover {
                 background: theme-color("primary");
                 color: $white;
@@ -315,6 +316,20 @@ body {
     h2,
     h3 {
         color: theme-color("secondary");
+    }
+    table {
+        tr {
+            td {
+                @include media-breakpoint-down(sm) {
+                    display: block;
+                }
+                &:last-child  {
+                    @include media-breakpoint-down(sm) {
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
     }
     .headline {
         display: flex;
@@ -461,6 +476,7 @@ body {
                         list-style: none;
                         padding: 0;
                         margin: 0;
+                        margin-bottom: 16px;
                         columns: 2;
                         @include media-breakpoint-down(lg) {
                             columns: 1;
@@ -772,6 +788,9 @@ body {
         padding: 0;
         margin: 0;
         text-align: center;
+        @include media-breakpoint-down(sm) {
+            text-align: left;
+        }
         li {
             display: inline-block;
             margin-right: 50px;

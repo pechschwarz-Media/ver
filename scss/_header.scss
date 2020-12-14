@@ -266,7 +266,8 @@ header {
                 }
                 &.current_page_parent,
                 &.current-menu-item,
-                &.current_page_item {
+                &.current_page_item,
+                &.current-page-ancestor {
                     a {
                         color: theme-color("secondary");
                         @include media-breakpoint-down(md) {
@@ -330,8 +331,10 @@ header {
                             color: theme-color("secondary");
                         }
                     }
+                    &.current_page_parent,
                     &.current-menu-item,
-                    &.current_page_item {
+                    &.current_page_item,
+                    &.current-page-ancestor {
                         a {
                             color: theme-color("secondary");
                             @include media-breakpoint-down(md) {
