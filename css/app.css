@@ -10955,7 +10955,7 @@ h4 {
   width: 100%;
   background: #f5f5f5;
   transform: translateY(100%);
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 .connection-check .connection-check__toggle {
   background: #2284B5;
@@ -11348,7 +11348,7 @@ h4 {
   transform: rotateZ(180deg);
 }
 .connection-check.moved {
-  transform: translateY(100%) !important;
+  transform: translateY(250%) !important;
 }
 
 /* Header (Background) */
