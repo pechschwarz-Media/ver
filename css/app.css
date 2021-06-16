@@ -9926,6 +9926,11 @@ body:before {
   z-index: 100;
 }
 
+/* Lightbox */
+.df-lightbox-wrapper {
+  z-index: 99999999999999 !important;
+}
+
 /* Scroll-Up */
 .scroll-up {
   position: fixed;
@@ -10691,17 +10696,22 @@ body:before {
 .downloads .downloads__list .download .text .title {
   font-weight: 700;
 }
-.downloads .downloads__list .download a {
+.downloads .downloads__list .download a,
+.downloads .downloads__list .download ._df_button {
   background: #EE7100;
   color: #fff;
   display: block;
   text-align: center;
   padding: 20px 15px;
   font-weight: 700;
+  font-size: 1rem;
   position: relative;
+  border: none;
+  border-radius: 0;
   transition: all 0.3s ease;
 }
-.downloads .downloads__list .download a:before {
+.downloads .downloads__list .download a:before,
+.downloads .downloads__list .download ._df_button:before {
   content: "";
   width: 0;
   height: 0;
@@ -10713,7 +10723,8 @@ body:before {
   left: 50%;
   transform: translateX(-50%);
 }
-.downloads .downloads__list .download a:after {
+.downloads .downloads__list .download a:after,
+.downloads .downloads__list .download ._df_button:after {
   content: "";
   font-family: "themify";
   position: absolute;
@@ -10723,7 +10734,8 @@ body:before {
   font-size: 22px;
   font-weight: normal;
 }
-.downloads .downloads__list .download a:hover {
+.downloads .downloads__list .download a:hover,
+.downloads .downloads__list .download ._df_button:hover {
   background: #2284B5;
 }
 

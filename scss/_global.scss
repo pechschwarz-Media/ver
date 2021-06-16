@@ -25,6 +25,12 @@ body {
     }
 }
 
+/* Lightbox */
+
+.df-lightbox-wrapper {
+    z-index: 99999999999999 !important;
+}
+
 /* Scroll-Up */
 
 .scroll-up {
@@ -737,14 +743,18 @@ body {
                     font-weight: $font-weight-bold;
                 }
             }
-            a {
+            a,
+            ._df_button {
                 background: theme-color("secondary");
                 color: $white;
                 display: block;
                 text-align: center;
                 padding: 20px 15px;
                 font-weight: $font-weight-bold;
+                font-size: 1rem;
                 position: relative;
+                border: none;
+                border-radius: 0;
                 transition: all 0.3s ease;
                 &:before {
                     content: "";
